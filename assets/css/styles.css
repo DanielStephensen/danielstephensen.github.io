@@ -436,7 +436,7 @@ p { color: var(--text); }
 /* Top row: title-block (left) + meta group (right) */
 .course-title-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
   flex-wrap: wrap;
@@ -445,8 +445,10 @@ p { color: var(--text); }
 
 .course-title-block {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .course-name {
