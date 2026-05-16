@@ -339,9 +339,6 @@ p { color: var(--text); }
   gap: 4px;
 }
 
-.badge-grade-a  { background: var(--green-light); color: var(--green); }
-.badge-grade-b  { background: var(--blue-light);  color: var(--blue); }
-.badge-grade-c  { background: var(--amber-light); color: var(--amber); }
 .badge-pass     { background: var(--gray-badge);  color: var(--gray-text); }
 .badge-ects     { background: var(--gray-badge);  color: var(--gray-text); }
 .badge-type     { background: var(--blue-light);  color: var(--blue); }
