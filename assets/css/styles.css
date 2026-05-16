@@ -115,6 +115,27 @@ p { color: var(--text); }
 .nav-links a:hover { color: var(--navy); background: var(--bg-alt); }
 .nav-links a.active { color: var(--blue); background: var(--blue-light); }
 
+.nav-links .nav-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  color: var(--blue);
+  transition: color .15s, background .15s;
+}
+.nav-links .nav-linkedin:hover {
+  color: var(--blue);
+  background: var(--bg-alt);
+}
+
 /* Hamburger */
 .nav-toggle {
   display: none;
