@@ -433,7 +433,7 @@ p { color: var(--text); }
 }
 .course-item:hover { border-color: var(--blue-muted); }
 
-/* Top row: badges + link */
+/* Top row: name (left) + meta group (right) */
 .course-title-row {
   display: flex;
   align-items: center;
@@ -444,12 +444,18 @@ p { color: var(--text); }
 }
 
 .course-name {
-  display: block;
   font-size: .9rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1.35;
-  margin-bottom: 5px;
+}
+
+.course-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 .course-link {
