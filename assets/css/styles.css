@@ -433,23 +433,27 @@ p { color: var(--text); }
 }
 .course-item:hover { border-color: var(--blue-muted); }
 
-/* Top row: date (left) + meta group (right) */
+/* Top row: title-block (left) + meta group (right) */
 .course-title-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+}
+
+.course-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .course-name {
-  display: block;
   font-size: .9rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1.35;
-  margin-bottom: 2px;
 }
 
 .course-meta {
