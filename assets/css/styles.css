@@ -22,9 +22,6 @@
   --gray-text:    #475569;
   --nav-h:        68px;
   --max-w:        1140px;
-  --tl-gap:       32px;
-  --dot-size:     14px;
-  --line-x:       20px;
   --radius:       8px;
   --radius-lg:    14px;
   --shadow-sm:    0 1px 2px rgba(15,23,42,.06);
@@ -187,17 +184,27 @@ p { color: var(--text); }
   margin-bottom: 28px;
 }
 
+/*
+  Timeline geometry (all values consistent):
+  - .timeline padding-left: 48px
+  - Line:  left 19px, width 2px  → center at 20px
+  - Dot:   10×10px, left -33px from .tl-item
+           → left edge at 48-33=15px from .timeline
+           → center at 15+5=20px  ✓ matches line center
+*/
+
 .timeline {
   position: relative;
-  padding-left: calc(var(--line-x) * 2 + var(--dot-size));
+  padding-left: 48px;
 }
 
+/* Vertical line */
 .timeline::before {
   content: '';
   position: absolute;
-  left: var(--line-x);
-  top: 8px;
-  bottom: 8px;
+  left: 19px;
+  top: 0;
+  bottom: 0;
   width: 2px;
   background: var(--border);
   border-radius: 2px;
@@ -205,23 +212,23 @@ p { color: var(--text); }
 
 .tl-item {
   position: relative;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
 .tl-item:last-child { margin-bottom: 0; }
 
-/* Dot */
+/* Dot — perfectly centred on the line */
 .tl-item::before {
   content: '';
   position: absolute;
-  left: calc(-1 * (var(--line-x) + var(--dot-size) / 2 + 1px));
-  top: 18px;
-  width: var(--dot-size);
-  height: var(--dot-size);
+  left: -33px;
+  top: 20px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--blue);
-  border: 3px solid var(--bg);
-  box-shadow: 0 0 0 2px var(--blue);
-  z-index: 1;
+  background: #fff;
+  border: 2px solid var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-light);
+  z-index: 2;
 }
 
 /* =====================================================================
@@ -680,10 +687,6 @@ p { color: var(--text); }
    Responsive
    ===================================================================== */
 @media (max-width: 768px) {
-  :root {
-    --line-x: 16px;
-  }
-
   /* Nav mobile */
   .nav-links {
     display: none;
