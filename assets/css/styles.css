@@ -21,7 +21,7 @@
   --gray-badge:   #f1f5f9;
   --gray-text:    #475569;
   --nav-h:        68px;
-  --max-w:        1140px;
+  --max-w:        1300px;
   --radius:       8px;
   --radius-lg:    14px;
   --shadow-sm:    0 1px 2px rgba(15,23,42,.06);
@@ -147,7 +147,7 @@ p { color: var(--text); }
 .section-header {
   background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
   color: #fff;
-  padding: 64px 24px 56px;
+  padding: 32px 24px 32px;
   text-align: center;
 }
 .section-header h1 { color: #fff; margin-bottom: 10px; }
@@ -216,12 +216,13 @@ p { color: var(--text); }
 }
 .tl-item:last-child { margin-bottom: 0; }
 
-/* Dot — perfectly centred on the line */
+/* Dot — vertically centred on the date label:
+   card border (1) + padding-top (24) + half .tl-meta height (~13.5) - half dot height (5) ≈ 34px */
 .tl-item::before {
   content: '';
   position: absolute;
   left: -33px;
-  top: 20px;
+  top: 34px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -501,6 +502,12 @@ p { color: var(--text); }
 .badge-ta {
   background: #fef3c7;
   color: #92400e;
+}
+
+/* Course type badge */
+.badge-course-type {
+  background: #fff7ed;
+  color: #c2410c;
 }
 
 /* Key Takeaways section */
