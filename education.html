@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education — Daniel Stephensen</title>
+  <meta name="description" content="Educational background of Daniel de Oliveira Stephensen, including university courses and grades.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- ── Navigation ───────────────────────────────────────────────── -->
+  <nav class="nav" role="navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Daniel Stephensen</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html" class="active">Education</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page header ──────────────────────────────────────────────── -->
+  <main class="page">
+    <header class="section-header">
+      <h1>Education</h1>
+      <p>Degrees, courses, and what I learned along the way — including grades and links to official course descriptions.</p>
+    </header>
+
+    <!-- ── Grade legend ─────────────────────────────────────────────── -->
+    <div style="background:var(--bg-alt); border-bottom:1px solid var(--border); padding:14px 24px;">
+      <div style="max-width:var(--max-w); margin:0 auto; display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+        <span style="font-size:.75rem; font-weight:700; color:var(--text-light); letter-spacing:.06em; text-transform:uppercase; margin-right:4px;">Danish grade scale</span>
+        <span class="badge badge-grade-a">12 — Excellent</span>
+        <span class="badge badge-grade-b">10 — Very Good</span>
+        <span class="badge badge-grade-c">7 — Good</span>
+        <span class="badge badge-pass">Passed</span>
+      </div>
+    </div>
+
+    <!-- ── Timeline ──────────────────────────────────────────────────── -->
+    <section class="timeline-section">
+      <div class="container">
+        <p class="timeline-label"><i class="fa-solid fa-graduation-cap"></i>&nbsp; Degrees</p>
+        <div class="timeline">
+
+          <!-- ═══════════════════════════════════════════════════════════
+               1 — MSc Computer Science
+          ════════════════════════════════════════════════════════════ -->
+          <div class="tl-item">
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Feb 2024 – Present</span>
+                <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen</span>
+              </div>
+              <h3 class="tl-title">Master of Science (MSc) in Computer Science</h3>
+              <p class="tl-desc">
+                Specialising in algorithms, machine learning, and computational methods. Currently completed 82.5 of 120 ECTS. Pursuing a General Profile in Computer Science.
+              </p>
+
+              <div class="course-list">
+
+                <!-- Compulsory -->
+                <p class="timeline-label mt-4"><i class="fa-solid fa-circle-dot"></i>&nbsp; Compulsory Courses</p>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Advanced Programming</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-a">12 — Excellent</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Mastered functional programming paradigms, higher-order functions, and monadic composition in F#.</li>
+                    <li>Studied type systems, language semantics, and principled approaches to software abstraction.</li>
+                    <li>Designed and implemented a substantial programming project using advanced language features.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Advanced+Programming" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Advanced Algorithms and Data Structures</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-a">12 — Excellent</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied amortized analysis, cache-oblivious data structures, and advanced graph algorithms.</li>
+                    <li>Explored geometric algorithms, persistent data structures, and lower bound techniques.</li>
+                    <li>Proved correctness and complexity bounds for complex algorithmic constructions.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Advanced+Algorithms+and+Data+Structures" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Advanced Computer Systems</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-c">7 — Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Covered distributed systems design, concurrency models, and fault-tolerance mechanisms.</li>
+                    <li>Analysed system performance at the hardware and OS level, including memory hierarchies and I/O.</li>
+                    <li>Implemented concurrent programs and reasoned about correctness under race conditions.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Advanced+Computer+Systems" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Restricted Electives -->
+                <p class="timeline-label mt-16"><i class="fa-solid fa-circle-dot"></i>&nbsp; Restricted Elective Courses</p>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Online and Reinforcement Learning</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied the multi-armed bandit framework, explore-exploit trade-offs, and regret minimisation.</li>
+                    <li>Learned Q-learning, policy gradient methods, and temporal difference algorithms.</li>
+                    <li>Applied reinforcement learning to sequential decision-making problems.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Online+and+Reinforcement+Learning" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Natural Language Processing (NLP)</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-a">12 — Excellent</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Explored transformer architectures, attention mechanisms, and pre-trained language models (BERT, GPT).</li>
+                    <li>Built NLP pipelines for tasks including text classification, named entity recognition, and sequence labelling.</li>
+                    <li>Evaluated and fine-tuned large language models on domain-specific datasets.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Natural+Language+Processing" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Numerical Optimization</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied gradient descent variants, Newton's method, and quasi-Newton methods for large-scale optimisation.</li>
+                    <li>Covered convex optimisation theory, Lagrange multipliers, and constrained optimisation via KKT conditions.</li>
+                    <li>Implemented numerical optimisation algorithms and analysed their convergence properties.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Numerical+Optimization" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Neural Information Retrieval</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-a">12 — Excellent</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied neural ranking models, dense retrieval, and BERT-based passage retrieval systems.</li>
+                    <li>Explored learned similarity metrics, contrastive learning, and bi-encoder versus cross-encoder architectures.</li>
+                    <li>Implemented and evaluated a neural retrieval pipeline on standard IR benchmarks.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Neural+Information+Retrieval" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Computational Methods in Simulation</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-a">12 — Excellent</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Applied Monte Carlo methods and variance reduction techniques to complex simulation problems.</li>
+                    <li>Solved ordinary and partial differential equations numerically using finite difference and finite element methods.</li>
+                    <li>Modelled stochastic systems and analysed their statistical properties.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Computational+Methods+in+Simulation" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Electives -->
+                <p class="timeline-label mt-16"><i class="fa-solid fa-circle-dot"></i>&nbsp; Elective Courses</p>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Computational Geometry</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-a">12 — Excellent</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied geometric algorithms for convex hulls, triangulation, Voronoi diagrams, and point location.</li>
+                    <li>Analysed the complexity of geometric problems and designed optimal or near-optimal algorithms.</li>
+                    <li>Applied computational geometry techniques to problems in computer graphics and spatial data processing.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Computational+Geometry" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Approximation Algorithms</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Designed and analysed algorithms that guarantee near-optimal solutions to NP-hard optimisation problems.</li>
+                    <li>Studied greedy approximation schemes, LP relaxation and rounding, and primal-dual methods.</li>
+                    <li>Proved inapproximability results using PCP theorem-based hardness reductions.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Approximation+Algorithms" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Probability Theory and Statistics 2</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied stochastic processes, martingales, and convergence theorems in probability theory.</li>
+                    <li>Covered Bayesian statistical inference, prior-posterior updates, and credible intervals.</li>
+                    <li>Applied information-theoretic tools including entropy, mutual information, and the data processing inequality.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Probability+Theory+and+Statistics+2" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+              </div><!-- /course-list MSc -->
+            </div><!-- /tl-card -->
+          </div><!-- /tl-item MSc -->
+
+          <!-- ═══════════════════════════════════════════════════════════
+               2 — BSc Computer Science
+          ════════════════════════════════════════════════════════════ -->
+          <div class="tl-item">
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Sep 2019 – Jun 2022</span>
+                <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen</span>
+              </div>
+              <h3 class="tl-title">Bachelor of Science (BSc) in Computer Science</h3>
+              <p class="tl-desc">
+                Graduated July 2022. Completed 180 ECTS across major and minor subjects in Computer Science. Bachelor project title: <em>Planar Convex Hulls</em>.
+              </p>
+
+              <div class="course-list">
+
+                <!-- 1st Year -->
+                <p class="timeline-label mt-4"><i class="fa-solid fa-circle-dot"></i>&nbsp; 1st Year — Compulsory</p>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Programming and Problem Solving</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-pass">Passed</span>
+                      <span class="badge badge-ects">15 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Built a foundation in Python programming, covering variables, control flow, functions, and recursion.</li>
+                    <li>Developed systematic problem-solving skills through exercises in algorithm design and decomposition.</li>
+                    <li>Implemented and tested programs for a range of computational problems.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Programming+and+Problem+Solving" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Discrete Mathematics and Algorithms</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-pass">Passed</span>
+                      <span class="badge badge-ects">15 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied graph theory, combinatorics, and formal proof techniques including induction and contradiction.</li>
+                    <li>Learned algorithm design strategies — divide-and-conquer, greedy methods, and dynamic programming.</li>
+                    <li>Analysed algorithm complexity using Big-O notation and recurrence relations.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Discrete+Mathematics+and+Algorithms" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Interaction Design</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Applied user-centred design principles and iterative prototyping to create usable interfaces.</li>
+                    <li>Conducted usability evaluations including heuristic analysis and user testing sessions.</li>
+                    <li>Developed wireframes and interactive prototypes, and documented design rationale.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Interaction+Design" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Linear Algebra in Computer Science</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Covered vectors, matrices, linear transformations, eigenvalues, and singular value decomposition.</li>
+                    <li>Explored applications in computer graphics, dimensionality reduction, and machine learning.</li>
+                    <li>Developed geometric intuition for linear algebraic operations in high-dimensional spaces.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Linear+Algebra+in+Computer+Science" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Software Development</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">15 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Practised agile software development with version control (Git), code review, and continuous integration.</li>
+                    <li>Applied software engineering principles: testing, design patterns, and modular architecture.</li>
+                    <li>Collaborated in a team to deliver a substantial software project from requirements to deployment.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Software+Development" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Specialisation -->
+                <p class="timeline-label mt-16"><i class="fa-solid fa-circle-dot"></i>&nbsp; Specialisation — Compulsory</p>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Mathematical Analysis and Probability Theory for Computer Scientists (MASD)</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-c">7 — Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied limits, differentiation, and integration within a CS-oriented mathematical framework.</li>
+                    <li>Covered probability theory: random variables, distributions, and expectation.</li>
+                    <li>Applied analytical techniques to algorithm analysis and probabilistic reasoning.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Mathematical+Analysis+Probability+Theory+Computer+Scientists" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Computer Systems</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-c">7 — Good</span>
+                      <span class="badge badge-ects">15 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Explored computer architecture at the hardware level, including the CPU pipeline, memory hierarchy, and caching.</li>
+                    <li>Learned assembly language programming and the interaction between compiled code and the OS.</li>
+                    <li>Studied operating system concepts: process management, virtual memory, and system calls.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Computer+Systems" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Modelling and Analysis of Data</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-c">7 — Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Built and evaluated statistical models including linear and logistic regression.</li>
+                    <li>Applied hypothesis testing, confidence intervals, and model selection criteria.</li>
+                    <li>Worked with real datasets in Python, using libraries such as NumPy, Pandas, and Matplotlib.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Modelling+and+Analysis+of+Data" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Data Science</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-a">12 — Excellent</span>
+                      <span class="badge badge-ects">15 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Built end-to-end data science pipelines covering data cleaning, feature engineering, and model evaluation.</li>
+                    <li>Applied classification, clustering, and dimensionality reduction techniques to real-world datasets.</li>
+                    <li>Created effective data visualisations and communicated analytical insights clearly.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Data+Science" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Algorithms and Data Structures</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied advanced sorting algorithms, balanced search trees, heaps, and hash tables in depth.</li>
+                    <li>Analysed time and space complexity rigorously and applied algorithmic techniques to graph problems.</li>
+                    <li>Implemented and benchmarked data structures in a practical programming component.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Algorithms+and+Data+Structures" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Randomized Algorithms for Data Analysis (RAD)</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-a">12 — Excellent</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied probabilistic algorithm design: random sampling, hashing, and Markov chain Monte Carlo methods.</li>
+                    <li>Learned sketching and streaming algorithms for handling massive datasets under memory constraints.</li>
+                    <li>Analysed randomised algorithms using probability tools including Chernoff bounds and concentration inequalities.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Randomized+Algorithms+for+Data+Analysis" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Elements of Machine Learning</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Introduced supervised learning (linear regression, SVMs, decision trees) and unsupervised learning (k-means, PCA).</li>
+                    <li>Studied the bias-variance trade-off, cross-validation, and model selection techniques.</li>
+                    <li>Built and evaluated machine learning models using scikit-learn on real-world datasets.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Elements+of+Machine+Learning" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Philosophy of Computer Science</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-c">7 — Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Examined philosophical foundations of computation: Church-Turing thesis, computability, and decidability.</li>
+                    <li>Discussed epistemological questions in CS and the nature of algorithmic explanation.</li>
+                    <li>Engaged with ethical dimensions of AI and the societal impact of computing systems.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Philosophy+of+Computer+Science" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Electives BSc -->
+                <p class="timeline-label mt-16"><i class="fa-solid fa-circle-dot"></i>&nbsp; Elective Courses</p>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Logic in Computer Science</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-c">7 — Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied propositional and first-order predicate logic: syntax, semantics, and proof systems.</li>
+                    <li>Applied formal logic to program verification and automated reasoning.</li>
+                    <li>Learned about model theory and the correspondence between logic and computation.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Logic+in+Computer+Science" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Mathematical Analysis</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-c">7 — Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Covered sequences and series, limits, continuity, and differentiability rigorously in real analysis.</li>
+                    <li>Studied the Riemann integral, fundamental theorem of calculus, and improper integrals.</li>
+                    <li>Proved core theorems of analysis and applied them to problems in computing and optimisation.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Mathematical+Analysis" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Machine Learning A</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-a">12 — Excellent</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied deep learning architectures: feedforward networks, CNNs, and recurrent models.</li>
+                    <li>Implemented backpropagation and trained models using PyTorch on image and sequence data.</li>
+                    <li>Explored regularisation techniques, batch normalisation, and transfer learning.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Machine+Learning+A" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+                <div class="course-item">
+                  <div class="course-header">
+                    <span class="course-name">Machine Learning B</span>
+                    <div class="badge-row" style="margin-top:0">
+                      <span class="badge badge-grade-b">10 — Very Good</span>
+                      <span class="badge badge-ects">7.5 ECTS</span>
+                    </div>
+                  </div>
+                  <ul class="course-learned">
+                    <li>Studied probabilistic graphical models, variational inference, and the EM algorithm.</li>
+                    <li>Covered Gaussian processes, Bayesian optimisation, and deep generative models (VAEs, GANs).</li>
+                    <li>Applied advanced ML methods to structured prediction and uncertainty quantification tasks.</li>
+                  </ul>
+                  <div class="course-actions">
+                    <a href="https://kurser.ku.dk/?q=Machine+Learning+B" target="_blank" rel="noopener" class="btn-link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>Course description
+                    </a>
+                  </div>
+                </div>
+
+              </div><!-- /course-list BSc -->
+            </div><!-- /tl-card -->
+          </div><!-- /tl-item BSc -->
+
+          <!-- ═══════════════════════════════════════════════════════════
+               3 — HHX
+          ════════════════════════════════════════════════════════════ -->
+          <div class="tl-item">
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Aug 2015 – Jun 2018</span>
+                <span class="tl-org"><i class="fa-solid fa-school"></i>Hillerød Handelsgymnasium</span>
+              </div>
+              <h3 class="tl-title">Højere Handelseksamen (HHX)</h3>
+              <ul class="tl-bullets">
+                <li>Completed the Danish Higher Commercial Examination (HHX), a three-year upper secondary programme with a business and economics profile.</li>
+                <li>Developed a strong foundation in mathematics, economics, and business communication.</li>
+                <li>Participated in the school's Masterclass enrichment programme and served as a mathematics mentor for fellow students.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+      </div><!-- /container -->
+    </section>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <p>© 2025 Daniel de Oliveira Stephensen &nbsp;·&nbsp;
+      <a href="mailto:daniel@stephensen.net">daniel@stephensen.net</a>
+    </p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

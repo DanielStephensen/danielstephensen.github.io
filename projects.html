@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Daniel Stephensen</title>
+  <meta name="description" content="Software development projects by Daniel de Oliveira Stephensen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- ── Navigation ───────────────────────────────────────────────── -->
+  <nav class="nav" role="navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Daniel Stephensen</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html" class="active">Projects</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page header ──────────────────────────────────────────────── -->
+  <main class="page">
+    <header class="section-header">
+      <h1>Software Projects</h1>
+      <p>A timeline of software I have designed, built, and shipped — from solo freelance systems to large-scale enterprise delivery.</p>
+    </header>
+
+    <!-- ── Timeline ──────────────────────────────────────────────────── -->
+    <section class="timeline-section">
+      <div class="container">
+        <p class="timeline-label"><i class="fa-solid fa-code"></i>&nbsp; Projects</p>
+        <div class="timeline">
+
+          <!-- ═══════════════════════════════════════════════════════════
+               1 — VetAlign
+          ════════════════════════════════════════════════════════════ -->
+          <div class="tl-item">
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i>2024 – Present</span>
+                <span class="tl-org"><i class="fa-solid fa-user"></i>Freelance / Independent</span>
+              </div>
+              <h3 class="tl-title">VetAlign — Medical Record System for Veterinary Clinics</h3>
+              <p class="tl-desc">
+                A full-stack medical record and practice management system designed specifically for Danish veterinary clinics. VetAlign enables clinics to digitise patient records, manage appointments, and streamline administrative workflows in a secure, GDPR-compliant environment.
+              </p>
+              <ul class="tl-bullets">
+                <li>Designed and implemented the full system architecture — from database schema to frontend interface — as a solo developer.</li>
+                <li>Built a responsive web application using TypeScript (React) on the frontend and C# on the backend, with a SQL database layer.</li>
+                <li>Developed role-based access control, audit logging, and data encryption to meet healthcare compliance requirements.</li>
+                <li>Deployed and maintained the system in a cloud environment with CI/CD pipelines and automated testing.</li>
+                <li>Conducted user interviews with veterinary professionals to iteratively refine the product based on real clinical workflows.</li>
+              </ul>
+              <div class="badge-row">
+                <span class="badge badge-type"><i class="fa-solid fa-laptop-code"></i> Full-Stack</span>
+                <span class="badge badge-pass">C#</span>
+                <span class="badge badge-pass">TypeScript</span>
+                <span class="badge badge-pass">React</span>
+                <span class="badge badge-pass">SQL</span>
+                <span class="badge badge-pass">CI/CD</span>
+                <span class="badge badge-pass">Cloud</span>
+              </div>
+              <div class="btn-row">
+                <a href="https://vetalign.dk" target="_blank" rel="noopener" class="btn-link">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>Visit vetalign.dk
+                </a>
+              </div>
+
+              <!-- Video embed — replace the src with a real YouTube embed URL or a local video path -->
+              <div class="video-wrap" style="margin-top:24px;">
+                <!--
+                  To embed a YouTube video, replace the src below with your embed URL, e.g.:
+                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+
+                  To embed a local video file, replace the entire <div class="video-placeholder">
+                  block with:
+                  <video controls style="width:100%;height:100%;">
+                    <source src="assets/videos/vetalign-demo.mp4" type="video/mp4">
+                  </video>
+                -->
+                <div class="video-placeholder">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <p>Demo video coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               2 — Netcompany / Public Sector Projects
+          ════════════════════════════════════════════════════════════ -->
+          <div class="tl-item">
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Aug 2022 – Jan 2024</span>
+                <span class="tl-org"><i class="fa-solid fa-building"></i>Netcompany</span>
+              </div>
+              <h3 class="tl-title">Public Sector &amp; Enterprise Software Delivery</h3>
+              <p class="tl-desc">
+                As part of Netcompany's delivery teams, I contributed to large-scale software projects for high-profile Danish public sector and private clients, working across the full development lifecycle.
+              </p>
+
+              <!-- DOT -->
+              <div style="margin-top:20px; padding:16px 20px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius);">
+                <h4 style="font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:8px;">
+                  <i class="fa-solid fa-train-subway" style="color:var(--blue); margin-right:6px;"></i>DOT — Din Offentlige Transport
+                </h4>
+                <ul class="tl-bullets">
+                  <li>Developed and maintained features in the DOT public transport information platform used by millions of Danish commuters.</li>
+                  <li>Worked on backend services and frontend components within an agile, multi-team delivery structure.</li>
+                </ul>
+              </div>
+
+              <!-- esundhed -->
+              <div style="margin-top:12px; padding:16px 20px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius);">
+                <h4 style="font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:8px;">
+                  <i class="fa-solid fa-heart-pulse" style="color:var(--blue); margin-right:6px;"></i>esundhed.dk — National Health Portal
+                </h4>
+                <ul class="tl-bullets">
+                  <li>Contributed to the national Danish e-health platform, building features that citizens use to access health records and services.</li>
+                  <li>Applied strict data handling and security practices required in healthcare-adjacent systems.</li>
+                </ul>
+              </div>
+
+              <!-- Novo Nordisk -->
+              <div style="margin-top:12px; padding:16px 20px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius);">
+                <h4 style="font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:8px;">
+                  <i class="fa-solid fa-flask" style="color:var(--blue); margin-right:6px;"></i>Novo Nordisk — Internal Systems
+                </h4>
+                <ul class="tl-bullets">
+                  <li>Developed internal software solutions for Novo Nordisk, working closely with stakeholders to translate business requirements into robust features.</li>
+                  <li>Gained experience operating within a highly regulated, compliance-focused corporate environment.</li>
+                </ul>
+              </div>
+
+              <div class="badge-row">
+                <span class="badge badge-type"><i class="fa-solid fa-laptop-code"></i> Full-Stack</span>
+                <span class="badge badge-pass">C#</span>
+                <span class="badge badge-pass">TypeScript</span>
+                <span class="badge badge-pass">React</span>
+                <span class="badge badge-pass">SQL</span>
+                <span class="badge badge-pass">Agile</span>
+              </div>
+
+              <!-- Video embed placeholder -->
+              <div class="video-wrap" style="margin-top:24px;">
+                <!--
+                  Add a project demo video here if available.
+                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                -->
+                <div class="video-placeholder">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <p>Project demo not publicly available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ═══════════════════════════════════════════════════════════
+               3 — Placeholder for future projects
+          ════════════════════════════════════════════════════════════ -->
+          <div class="tl-item">
+            <div class="tl-card" style="border-style: dashed; background: var(--bg-alt);">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Coming soon</span>
+              </div>
+              <h3 class="tl-title" style="color: var(--text-muted);">More projects to be added</h3>
+              <p class="tl-desc">Additional personal and research projects will be documented here as they are completed.</p>
+              <div class="btn-row" style="margin-top:12px;">
+                <a href="mailto:daniel@stephensen.net" class="btn-link">
+                  <i class="fa-solid fa-envelope"></i>Get in touch
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+      </div><!-- /container -->
+    </section>
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <p>© 2025 Daniel de Oliveira Stephensen &nbsp;·&nbsp;
+      <a href="mailto:daniel@stephensen.net">daniel@stephensen.net</a>
+    </p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
