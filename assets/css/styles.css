@@ -433,23 +433,77 @@ p { color: var(--text); }
 }
 .course-item:hover { border-color: var(--blue-muted); }
 
-.course-header {
+/* Top row: name + link + badges */
+.course-title-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
+  margin-bottom: 6px;
 }
 
 .course-name {
   font-size: .9rem;
   font-weight: 700;
   color: var(--navy);
-  line-height: 1.3;
+  line-height: 1.35;
+}
+
+.course-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .73rem;
+  font-weight: 600;
+  color: var(--blue);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 3px 9px;
+  border-radius: 5px;
+  border: 1px solid var(--blue-muted);
+  background: var(--blue-light);
+  transition: background .15s, color .15s, border-color .15s;
+  text-decoration: none;
+}
+.course-link:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+.course-link i { font-size: .7rem; }
+
+/* Short text description */
+.course-desc {
+  font-size: .855rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 6px 0 8px;
+}
+
+/* TA badge */
+.badge-ta {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* Key Takeaways section */
+.course-takeaways {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.takeaways-label {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 7px;
 }
 
 .course-learned {
-  margin-top: 8px;
   padding-left: 0;
   display: flex;
   flex-direction: column;
@@ -471,13 +525,6 @@ p { color: var(--text); }
   height: 5px;
   border-radius: 50%;
   background: var(--text-light);
-}
-
-.course-actions {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 10px;
 }
 
 /* =====================================================================
