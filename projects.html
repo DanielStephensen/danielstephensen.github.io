@@ -75,28 +75,17 @@
                 <span class="badge badge-pass">CI/CD</span>
                 <span class="badge badge-pass">Cloud</span>
               </div>
-              <div class="btn-row">
-                <a href="https://vetalign.dk" target="_blank" rel="noopener" class="btn-link">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>Visit vetalign.dk
-                </a>
-              </div>
 
-              <!-- Video embed — replace the src with a real YouTube embed URL or a local video path -->
+              <!-- Video embed -->
               <div class="video-wrap" style="margin-top:24px;">
-                <!--
-                  To embed a YouTube video, replace the src below with your embed URL, e.g.:
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-
-                  To embed a local video file, replace the entire <div class="video-placeholder">
-                  block with:
-                  <video controls style="width:100%;height:100%;">
-                    <source src="assets/videos/vetalign-demo.mp4" type="video/mp4">
-                  </video>
-                -->
-                <div class="video-placeholder">
-                  <i class="fa-solid fa-circle-play"></i>
-                  <p>Demo video coming soon</p>
-                </div>
+                <video controls style="width:100%;height:100%;" preload="metadata">
+                  <!-- Use URL-encoded filename to avoid issues with spaces, and provide fallback link -->
+                  <source src="assets/videos/Vetalign%20demo.mp4" type="video/mp4">
+                  <!-- If browser doesn't support MP4, allow user to download or open directly -->
+                  Your browser does not support the video tag. You can
+                  <a href="assets/videos/Vetalign%20demo.mp4" download>download the video</a>
+                  or <a href="assets/videos/Vetalign%20demo.mp4" target="_blank" rel="noopener">open it in a new tab</a>.
+                </video>
               </div>
             </div>
           </div>
