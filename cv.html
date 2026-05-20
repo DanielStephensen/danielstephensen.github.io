@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Daniel de Oliveira Stephensen</title>
+  <meta name="description" content="Curriculum Vitae of Daniel de Oliveira Stephensen, Computer Scientist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* ── CV page background ───────────────────────────────────── */
+    .cv-page-bg {
+      background: #cbd5e1;
+      padding: calc(var(--nav-h) + 28px) 16px 56px;
+    }
+
+    /* ── A4 paper — column layout so header spans full width ──── */
+    .cv-paper {
+      width: 794px;
+      min-height: 1122px;          /* A4 at 96 dpi */
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       FULL-WIDTH HEADER (photo left + name/title right)
+    ══════════════════════════════════════════════════════════ */
+    .cv-header-full {
+      display: flex;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      position: relative;
+    }
+
+    .cv-header-download {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-family: inherit;
+      color: rgba(255,255,255,0.9);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.12);
+      padding: 3px 10px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .cv-header-download:hover {
+      background: rgba(255,255,255,0.24);
+    }
+
+    /* Spacer in header — matches sidebar width so name aligns with main content */
+    .cv-header-spacer {
+      width: 200px;
+      flex-shrink: 0;
+    }
+
+    /* Name / title column */
+    .cv-header-text-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 40px 16px 10px 54px;
+    }
+
+    /* Photo centred on the header/body boundary line */
+    .cv-header-photo-img {
+      position: absolute;
+      bottom: 0;
+      left: 100px;                       /* centre of 200px sidebar */
+      transform: translate(-50%, 50%);   /* straddles the boundary */
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 10%;
+      border: 4px solid #fff;
+      z-index: 10;
+    }
+
+    .cv-header-name {
+      font-size: 27px;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .cv-header-title {
+      font-size: 14.4px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.82);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       CONTENT ROW — sidebar (gray) + main (white)
+    ══════════════════════════════════════════════════════════ */
+    .cv-content-row {
+      display: flex;
+      flex: 1;
+    }
+
+    /* ── Gray sidebar ─────────────────────────────────────────── */
+    .cv-sidebar {
+      width: 200px;
+      flex-shrink: 0;
+      background: #e4e4e4;
+      padding: 112px 20px 28px;           /* top = 65px (half photo) + 17px gap */
+    }
+
+    .cv-sb-section { margin-bottom: 18px; }
+
+    .cv-sb-heading {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #1e293b;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #bbb;
+    }
+
+    .cv-contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .cv-contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      color: #374151;
+      line-height: 1.35;
+    }
+    .cv-contact-list li i {
+      width: 12px;
+      font-size: 10px;
+      color: #2563eb;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    .cv-contact-list a { color: #2563eb; text-decoration: none; }
+    .cv-contact-list a:hover { text-decoration: underline; }
+
+    .cv-bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .cv-bullet-list li {
+      font-size: 10px;
+      color: #374151;
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.45;
+    }
+    .cv-bullet-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #888;
+    }
+
+    /* ── White main column ────────────────────────────────────── */
+    .cv-main {
+      flex: 1;
+      background: #fff;
+    }
+
+    /* ── Timeline body ────────────────────────────────────────── */
+    .cv-body {
+      padding: 16px 22px 20px 54px;
+      position: relative;
+    }
+
+    /* ── Section — each draws its OWN line segment (unconnected) */
+    .cv-section {
+      position: relative;
+      margin-bottom: 22px;
+    }
+    .cv-section:last-child { margin-bottom: 0; }
+
+    /* Per-section timeline line: from top of icon to bottom of section */
+    .cv-section::after {
+      content: '';
+      position: absolute;
+      left: -29px;          /* aligns with icon center (54-29+0.75≈26px from body edge) */
+      top: 0;
+      bottom: 0;
+      width: 1.5px;
+      background: #dde3ea;
+      z-index: 1;
+    }
+
+    /* Blue circle icon — sits on top of the section line */
+    .cv-section-icon {
+      position: absolute;
+      left: -43px;          /* icon center = 54-43+14 = 25px from body edge */
+      top: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #2563eb;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      z-index: 3;
+      box-shadow: 0 0 0 3px #fff;
+    }
+
+    /* Section heading + rule */
+    .cv-section-header {
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .cv-section-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #0f172a;
+    }
+
+    /* ── Section heading link ─────────────────────────────────── */
+    .cv-section-link {
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 5px;
+    }
+    .cv-section-link:hover { color: #2563eb; }
+    .cv-section-link-icon {
+      font-size: 8px;
+      color: #94a3b8;
+      position: relative;
+      top: -1px;
+      transition: color .15s;
+    }
+    .cv-section-link:hover .cv-section-link-icon { color: #2563eb; }
+
+
+    /* Profile text */
+    .cv-profile-text {
+      font-size: 10px;
+      color: #374151;
+      line-height: 1.65;
+      text-align: justify;
+    }
+
+    /* ── Job / project entry ──────────────────────────────────── */
+    .cv-entry {
+      position: relative;
+      margin-top: 10px;
+    }
+    /* Small open dot on the timeline */
+    .cv-entry::before {
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1.5px solid #94a3b8;
+      z-index: 2;
+    }
+
+    .cv-entry-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .cv-entry-company {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .cv-entry-date {
+      font-size: 10px;
+      color: #64748b;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .cv-entry-role {
+      font-size: 11px;
+      color: #475569;
+      margin-bottom: 4px;
+    }
+
+    .cv-entry-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .cv-entry-bullets li {
+      font-size: 10px;
+      color: #374151;
+      padding-left: 11px;
+      position: relative;
+      line-height: 1.55;
+      text-align: justify;
+    }
+    .cv-entry-bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #64748b;
+    }
+
+    .cv-entry-desc {
+      font-size: 10px;
+      color: #374151;
+      line-height: 1.6;
+      text-align: justify;
+      margin-top: 3px;
+    }
+    .cv-entry-desc a { color: #2563eb; }
+
+    /* ── Education entry ──────────────────────────────────────── */
+    .cv-edu-entry {
+      position: relative;
+      margin-top: 9px;
+    }
+    .cv-edu-entry::before {
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1.5px solid #94a3b8;
+      z-index: 2;
+    }
+    .cv-edu-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .cv-edu-degree {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .cv-edu-date {
+      font-size: 10px;
+      color: #64748b;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .cv-edu-institution {
+      font-size: 11px;
+      color: #475569;
+    }
+
+    /* ── Print ────────────────────────────────────────────────── */
+    @media print {
+      @page { size: A4; margin: 0; }
+
+      * {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .nav, .cv-header-download, .footer { display: none !important; }
+
+      .cv-section-link-icon { display: none !important; }
+      .cv-section-link { color: inherit !important; pointer-events: none !important; }
+
+      .cv-page-bg { background: #fff !important; padding: 0 !important; }
+      .page { padding-top: 0 !important; }
+
+      .cv-paper {
+        width: 210mm !important;
+        min-height: 297mm !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+
+      /* padding-left on the header itself — measured from border edge,
+         same reference as sidebar (53mm) + cv-body padding-left (50px) */
+      .cv-header-full {
+        display: flex !important;
+        flex-direction: row !important;
+        background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+        padding-left: calc(53mm + 50px) !important;
+      }
+
+      .cv-header-spacer { display: none !important; }
+
+      .cv-header-text-side {
+        margin: 6px 16px 2px 0 !important;
+        align-items: flex-start !important;
+      }
+      .cv-header-name,
+      .cv-header-title { text-align: left !important; }
+
+      .cv-content-row {
+        display: flex !important;
+        flex-direction: row !important;
+        flex: 1 !important;
+        align-items: stretch !important;
+      }
+
+      .cv-sidebar {
+        width: 53mm !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        background: #e4e4e4 !important;
+      }
+
+      .cv-main {
+        flex: 1 !important;
+        min-width: 0 !important;
+        background: #fff !important;
+      }
+
+      /* All left space for the timeline lives here — icons/dots stay within cv-main */
+      .cv-body {
+        padding: 16px 22px 20px 50px !important;
+      }
+
+      /* Timeline: ensure positioning contexts survive print */
+      .cv-body, .cv-section, .cv-entry, .cv-edu-entry {
+        position: relative !important;
+      }
+
+      /* Vertical line per section */
+      .cv-section::after {
+        content: '' !important;
+        position: absolute !important;
+        display: block !important;
+        left: -29px !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        width: 1.5px !important;
+        background: #dde3ea !important;
+        z-index: 1 !important;
+      }
+
+      /* Blue circle section icon */
+      .cv-section-icon {
+        display: flex !important;
+        position: absolute !important;
+        background: #2563eb !important;
+        color: #fff !important;
+        box-shadow: 0 0 0 3px #fff !important;
+        z-index: 3 !important;
+      }
+
+      /* Entry dots */
+      .cv-entry::before {
+        content: '' !important;
+        position: absolute !important;
+        display: block !important;
+        left: -32px !important;
+        top: 5px !important;
+        width: 8px !important;
+        height: 8px !important;
+        border-radius: 50% !important;
+        background: #fff !important;
+        border: 1.5px solid #94a3b8 !important;
+        z-index: 2 !important;
+      }
+    }
+
+    /* ── Narrow screens: stack vertically ─────────────────────── */
+    @media (max-width: 840px) {
+      .cv-page-bg { padding: 0; background: #fff; }
+      .cv-toolbar { padding: 12px 16px; }
+      .cv-paper { width: 100%; min-height: auto; box-shadow: none; }
+      .cv-header-full { flex-direction: column; align-items: center; padding: 20px; gap: 12px; }
+      .cv-header-photo-side { width: auto; padding: 0; }
+      .cv-header-text-side { padding: 0; text-align: center; }
+      .cv-content-row { flex-direction: column; }
+      .cv-sidebar { width: 100%; }
+      .cv-section::after,
+      .cv-section-icon,
+      .cv-entry::before,
+      .cv-edu-entry::before { display: none; }
+      .cv-body { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ───────────────────────────────────────────────── -->
+  <nav class="nav" role="navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Daniel de Oliveira Stephensen</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/cv" class="active">CV</a>
+        <a href="/experience">Experience</a>
+        <a href="/education">Education</a>
+        <a href="https://www.linkedin.com/in/danielstephensen" target="_blank" rel="noopener" class="nav-linkedin" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── CV page ──────────────────────────────────────────────────── -->
+  <main class="page cv-page-bg">
+
+    <div class="cv-paper">
+
+      <!-- ══════════════════════════════════════════════════════════
+           FULL-WIDTH HEADER
+      ══════════════════════════════════════════════════════════ -->
+      <div class="cv-header-full">
+
+        <div class="cv-header-spacer"></div>
+
+        <div class="cv-header-text-side">
+          <div class="cv-header-name">Daniel de Oliveira<br>Stephensen</div>
+          <div class="cv-header-title">Computer Scientist</div>
+        </div>
+
+        <img src="assets/images/CV-portrait.png" alt="Daniel de Oliveira Stephensen" class="cv-header-photo-img">
+
+        <button onclick="window.print()" class="cv-header-download">
+          <i class="fa-solid fa-file-arrow-down"></i>Download
+        </button>
+
+      </div><!-- /cv-header-full -->
+
+      <!-- ══════════════════════════════════════════════════════════
+           CONTENT ROW
+      ══════════════════════════════════════════════════════════ -->
+      <div class="cv-content-row">
+
+        <!-- ── Gray sidebar ─────────────────────────────────────── -->
+        <aside class="cv-sidebar">
+
+          <div class="cv-sb-section">
+            <h2 class="cv-sb-heading">Contact</h2>
+            <ul class="cv-contact-list">
+              <li><i class="fa-solid fa-phone"></i>+45 28762109</li>
+              <li><i class="fa-solid fa-envelope"></i>daniel@stephensen.net</li>
+              <li>
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/danielstephensen" target="_blank" rel="noopener">danielstephensen</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-globe"></i>
+                <a href="https://danielstephensen.github.io" target="_blank" rel="noopener">danielstephensen.github.io</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cv-sb-section">
+            <h2 class="cv-sb-heading">Skills</h2>
+            <ul class="cv-bullet-list">
+              <li>Algorithms</li>
+              <li>Machine Learning</li>
+              <li>Software Development</li>
+              <li>C#</li>
+              <li>Python</li>
+              <li>Typescript &amp; React</li>
+              <li>HTML &amp; CSS</li>
+              <li>CI/CD</li>
+              <li>Projects Management</li>
+            </ul>
+          </div>
+
+          <div class="cv-sb-section">
+            <h2 class="cv-sb-heading">Languages</h2>
+            <ul class="cv-bullet-list">
+              <li>Danish (Fluent)</li>
+              <li>English (Fluent)</li>
+              <li>Portuguese (Fluent)</li>
+            </ul>
+          </div>
+
+        </aside>
+
+        <!-- ── White main column ─────────────────────────────────── -->
+        <div class="cv-main">
+          <div class="cv-body">
+
+            <!-- Profile -->
+            <div class="cv-section">
+              <div class="cv-section-icon"><i class="fa-solid fa-user"></i></div>
+              <div class="cv-section-header">
+                <span class="cv-section-title">Profile</span>
+              </div>
+              <p class="cv-profile-text">Software developer with a theoretical foundation in Computer Science, specialised in algorithms and machine learning. Passionate about general problem solving and building scalable and efficient solutions. Has broad experience within full-stack development and teaching.</p>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="cv-section">
+              <div class="cv-section-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="cv-section-header">
+                <span class="cv-section-title">
+                  <a href="/experience#work" class="cv-section-link">Work Experience<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a>
+                </span>
+              </div>
+
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <span class="cv-entry-company"><a href="/experience#netcompany" class="cv-section-link">Netcompany<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a></span>
+                  <span class="cv-entry-date">Aug 2022 - Jan 2024</span>
+                </div>
+                <div class="cv-entry-role">Software Developer</div>
+                <ul class="cv-entry-bullets">
+                  <li>Full-stack development for public and private sector clients. Built and maintained applications for organisations including DOT (Din Offentlige Transport), esundhed.dk, VIA Studieportal, and Novo Nordisk.</li>
+                </ul>
+              </div>
+
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <span class="cv-entry-company"><a href="/experience#ta-dma" class="cv-section-link">University of Copenhagen<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a></span>
+                  <span class="cv-entry-date">Sep 2021 - Jan 2022</span>
+                </div>
+                <div class="cv-entry-role">Teaching Assistant — Discrete Mathematics and Algorithms</div>
+                <ul class="cv-entry-bullets">
+                  <li>Facilitated weekly exercise sessions for first-year BSc students. Taught 3 times per week, reviewed and graded assignments, and provided constructive written feedback.</li>
+                </ul>
+              </div>
+
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <span class="cv-entry-company"><a href="/experience#ctrl-play" class="cv-section-link">Ctrl Play Goiânia<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a></span>
+                  <span class="cv-entry-date">Jul 2018 - Nov 2018</span>
+                </div>
+                <div class="cv-entry-role">Administration Employee and Teacher</div>
+                <ul class="cv-entry-bullets">
+                  <li>Taught programming to students aged 10-15 at a programming school in Brazil. Prepared course materials and handled administrative tasks.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Projects -->
+            <div class="cv-section">
+              <div class="cv-section-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="cv-section-header">
+                <span class="cv-section-title">
+                  <a href="/experience#projects" class="cv-section-link">Projects<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a>
+                </span>
+              </div>
+
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <span class="cv-entry-company"><a href="/experience#vetalign" class="cv-section-link">VetAlign<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a></span>
+                  <span class="cv-entry-date">2025 - Present</span>
+                </div>
+                <div class="cv-entry-role">Full-stack · Solo project</div>
+                <ul class="cv-entry-bullets">
+                  <li>Full-stack medical record system for Danish veterinary clinics. Designed SQL database, built backend in C# with Azure Functions, and frontend in TypeScript (React). Features AI-assisted clinical documentation. Watch the demo <a href="https://danielstephensen.github.io/experience#projects" target="_blank" rel="noopener">here</a>.</li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Education -->
+            <div class="cv-section">
+              <div class="cv-section-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="cv-section-header">
+                <span class="cv-section-title">
+                  <a href="/education#degrees" class="cv-section-link">Education<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a>
+                </span>
+              </div>
+
+              <div class="cv-edu-entry">
+                <div class="cv-edu-header">
+                  <span class="cv-edu-degree"><a href="/education#msc" class="cv-section-link">MSc in Computer Science<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a></span>
+                  <span class="cv-edu-date">Feb 2024 - Present</span>
+                </div>
+                <div class="cv-edu-institution">University of Copenhagen</div>
+              </div>
+
+              <div class="cv-edu-entry">
+                <div class="cv-edu-header">
+                  <span class="cv-edu-degree"><a href="/education#bsc" class="cv-section-link">BSc in Computer Science<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a></span>
+                  <span class="cv-edu-date">Sep 2019 - Jun 2022</span>
+                </div>
+                <div class="cv-edu-institution">University of Copenhagen</div>
+              </div>
+
+              <div class="cv-edu-entry">
+                <div class="cv-edu-header">
+                  <span class="cv-edu-degree"><a href="/education#hhx" class="cv-section-link">HHX (Higher Commercial Examination)<i class="fa-solid fa-arrow-up-right-from-square cv-section-link-icon"></i></a></span>
+                  <span class="cv-edu-date">Aug 2015 - Jun 2018</span>
+                </div>
+                <div class="cv-edu-institution">Hillerød Handelsgymnasium</div>
+              </div>
+
+            </div>
+
+          </div><!-- /cv-body -->
+        </div><!-- /cv-main -->
+      </div><!-- /cv-content-row -->
+    </div><!-- /cv-paper -->
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <p class="footer-name">Daniel de Oliveira Stephensen</p>
+    <div class="footer-contacts">
+      <a href="mailto:daniel@stephensen.net"><i class="fa-solid fa-envelope"></i>daniel@stephensen.net</a>
+      <a href="tel:+4528762109"><i class="fa-solid fa-phone"></i>+45 28 76 21 09</a>
+      <span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Frederiksberg+Copenhagen+Denmark" target="_blank">
+          <i class="fa-solid fa-location-dot"></i>Frederiksberg, Copenhagen, Denmark
+        </a>
+      </span>
+      <a href="https://www.linkedin.com/in/danielstephensen" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin"></i>LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
