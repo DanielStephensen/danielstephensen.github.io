@@ -24,8 +24,6 @@
         <a href="/">About</a>
         <a href="/experience" class="active">Experience</a>
         <a href="/education">Education</a>
-        <a href="/publications">Publications</a>
-        <a href="/projects">Projects</a>
         <a href="https://www.linkedin.com/in/danielstephensen" target="_blank" rel="noopener" class="nav-linkedin" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin"></i>
         </a>
@@ -41,35 +39,10 @@
     </header>
 
     <!-- ── Work experience ──────────────────────────────────────────── -->
-    <section class="timeline-section">
+    <section id="work" class="timeline-section">
       <div class="container">
         <p class="timeline-label"><i class="fa-solid fa-briefcase"></i>&nbsp; Work Experience</p>
         <div class="timeline">
-
-          <!-- 1 ── TA Randomized Algorithms -->
-          <div class="tl-item">
-            <div class="tl-card">
-              <div class="tl-meta">
-                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Apr 2025 – Jun 2025</span>
-                <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen &nbsp;·&nbsp; Part-time</span>
-              </div>
-              <h3 class="tl-title">Teaching Assistant — Randomized Algorithms and Data Structures</h3>
-              <p class="tl-desc">Supported students through the Randomized Algorithms and Data Structures course at the University of Copenhagen, covering probabilistic algorithm concepts including hashing, sketching, and randomized data structures. Responsibilities included leading weekly exercise sessions, holding office hours for individual support, and grading assignments with detailed written feedback.</p>
-              <div class="course-takeaways">
-                <p class="takeaways-label">Key Takeaways</p>
-                <ul class="course-learned">
-                  <li>Strengthened ability to communicate complex algorithmic concepts clearly under time pressure</li>
-                  <li>Deepened personal understanding of advanced randomization topics through teaching preparation</li>
-                  <li>Gained experience giving structured, constructive written feedback at university level</li>
-                </ul>
-              </div>
-              <div class="badge-row">
-                <span class="badge badge-type"><i class="fa-solid fa-chalkboard-user"></i> Teaching</span>
-                <span class="badge badge-pass">Algorithms</span>
-                <span class="badge badge-pass">Data Structures</span>
-              </div>
-            </div>
-          </div>
 
           <!-- 2 ── Netcompany -->
           <div class="tl-item">
@@ -79,14 +52,79 @@
                 <span class="tl-org"><i class="fa-solid fa-building"></i>Netcompany &nbsp;·&nbsp; Full-time</span>
               </div>
               <h3 class="tl-title">Software Developer</h3>
-              <p class="tl-desc">Worked as a full-stack software developer at Netcompany, delivering solutions for major Danish public sector and private clients — including DOT (Din Offentlige Transport), esundhed.dk, and Novo Nordisk. Built and maintained scalable applications using C#, TypeScript (React), HTML, CSS, and SQL within agile, multi-team delivery structures, and participated in client-facing workshops to translate business requirements into working software.</p>
+              <p class="tl-desc">Worked as a full-stack software developer at Netcompany, delivering solutions for organizations in both the public and private sector. Built and maintained scalable applications using C#, TypeScript (React), Javascript, HTML, CSS, and SQL. My projects included solutions at DOT, esundhed.dk, VIA Studieportal and Novo Nordisk.</p>
+              <!-- DOT -->
+              <div style="margin-top:20px; padding:16px 20px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius);">
+                <h4 style="font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:8px;">
+                  <i class="fa-solid fa-train-subway" style="color:var(--blue); margin-right:6px;"></i>DOT (Din Offentlige Transport) — DOT Tickets (app)
+                </h4>
+                <ul class="tl-bullets">
+                  <li>Developed and maintained smaller features in the DOT Tickets (DOT Billetter) app.</li>
+                  <li>Designed and implemented a scheduled changes feature that automatically communicated planned changes from four source systems (DSB, Movia, Metro, and Lokaltog) to relevant users of the DOT Tickets app.</li>
+                </ul>
+                <div class="badge-row">
+                  <span class="badge badge-pass">C#</span>
+                  <span class="badge badge-pass">JavaScript</span>
+                  <span class="badge badge-pass">SQL</span>
+                  <span class="badge badge-pass">HTML</span>
+                  <span class="badge badge-pass">Azure</span>
+                </div>
+              </div>
+
+              <!-- esundhed -->
+              <div style="margin-top:12px; padding:16px 20px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius);">
+                <h4 style="font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:8px;">
+                  <i class="fa-solid fa-heart-pulse" style="color:var(--blue); margin-right:6px;"></i>esundhed.dk — Health Portal
+                </h4>
+                <ul class="tl-bullets">
+                  <li>Responsible for maintaining the national Danish health data platform.</li>
+                </ul>
+                <div class="badge-row">
+                  <span class="badge badge-pass">Sitecore</span>
+                  <span class="badge badge-pass">CMS</span>
+                  <span class="badge badge-pass">C#</span>
+                  <span class="badge badge-pass">JavaScript</span>
+                  <span class="badge badge-pass">SQL</span>
+                </div>
+              </div>
+              <div style="margin-top:20px; padding:16px 20px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius);">
+                <h4 style="font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:8px;">
+                  <i class="fa-solid fa-graduation-cap" style="color:var(--blue); margin-right:6px;"></i>VIA Studieportal — Student Information System
+                </h4>
+                <ul class="tl-bullets">
+                  <li>Maintained a wellstructured and scalable frontend of VIA Studieportal.</li>
+                </ul>
+                <div class="badge-row">
+                  <span class="badge badge-pass">Typescript (React)</span>
+                  <span class="badge badge-pass">Atomic Design</span>
+                  <span class="badge badge-pass">CMS</span>
+                  <span class="badge badge-pass">HTML</span>
+                </div>
+              </div>
+
+              <!-- Novo Nordisk -->
+              <div style="margin-top:12px; padding:16px 20px; background:var(--bg-alt); border:1px solid var(--border); border-radius:var(--radius);">
+                <h4 style="font-size:.9rem; font-weight:700; color:var(--navy); margin-bottom:8px;">
+                  <i class="fa-solid fa-flask" style="color:var(--blue); margin-right:6px;"></i>Novo Nordisk — Internal System
+                </h4>
+                <ul class="tl-bullets">
+                  <li>I took over a failed internal backend project for Novo Nordisk and delivered a working solution.</li>
+                  <li>An alarm and evacuation system for evacuating employees from the main Novo Nordisk facility in case of emergency.</li>
+                </ul>
+                <div class="badge-row">
+                  <span class="badge badge-pass">C#</span>
+                  <span class="badge badge-pass">Critical Systems</span>
+                  <span class="badge badge-pass">Customer Relations</span>
+                </div>
+              </div>
               <div class="course-takeaways">
                 <p class="takeaways-label">Key Takeaways</p>
                 <ul class="course-learned">
-                  <li>Gained hands-on experience across the full software development lifecycle in large-scale, high-stakes environments</li>
-                  <li>Collaborated across cross-functional teams on systems serving millions of users in public transport and national health</li>
-                  <li>Applied strict data handling and compliance practices in both healthcare-adjacent and corporate regulated environments</li>
-                  <li>Completed an internal Client Engagement Seminar, strengthening stakeholder communication and requirements management skills</li>
+                  <li>Gained experience working in a professional software development environment.</li>
+                  <li>Improved my programming skills within C#, TypeScript, React, SQL, and Azure.</li>
+                  <li>Learned to navigate codebases and manage projects.</li>
+                  <li>Got experience working with clients in both the public and private sector.</li>
+                  <li>Improved my communication and collaboration skills within a team environment.</li>
                 </ul>
               </div>
               <div class="badge-row">
@@ -95,7 +133,12 @@
                 <span class="badge badge-pass">TypeScript</span>
                 <span class="badge badge-pass">React</span>
                 <span class="badge badge-pass">SQL</span>
-                <span class="badge badge-pass">Agile</span>
+                <span class="badge badge-pass">HTML</span>
+                <span class="badge badge-pass">Azure</span>
+                <span class="badge badge-pass">Agile development</span>
+                <span class="badge badge-pass">Critical Systems</span>
+                <span class="badge badge-pass">Customer Relations</span>
+                <span class="badge badge-pass">CMS</span>
               </div>
             </div>
           </div>
@@ -108,17 +151,18 @@
                 <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen &nbsp;·&nbsp; Part-time</span>
               </div>
               <h3 class="tl-title">Teaching Assistant — Discrete Mathematics and Algorithms</h3>
-              <p class="tl-desc">Facilitated weekly exercise sessions for first-year BSc students in discrete mathematics, graph theory, and introductory algorithm analysis at the University of Copenhagen. Reviewed and graded assignments, providing constructive written feedback aimed at developing students' mathematical reasoning skills.</p>
+              <p class="tl-desc">Facilitated weekly exercise sessions for first-year BSc students in diverse subjects within discrete mathematics and algorithms. The role involved teaching 3 times per week, reviewing and grading assignments, and providing constructive written feedback.</p>
               <div class="course-takeaways">
                 <p class="takeaways-label">Key Takeaways</p>
                 <ul class="course-learned">
-                  <li>Refined ability to make abstract mathematical concepts accessible to students at different levels</li>
-                  <li>Developed a structured approach to giving actionable written feedback on formal proofs and algorithmic solutions</li>
-                  <li>Completed a three-day internal TA training course covering pedagogical methods and assessment best practices</li>
+                  <li>Strengthened my mathematical and algorithmic skills.</li>
+                  <li>Developed experience communicating technical concepts to students.</li>
+                  <li>Improved my people skills through interaction with students.</li>
+                  <li>Learned to provide constructive written feedback.</li>
                 </ul>
               </div>
               <div class="badge-row">
-                <span class="badge badge-type"><i class="fa-solid fa-chalkboard-user"></i> Teaching</span>
+                <span class="badge badge-type"><i class="fa-solid fa-chalkboard-user"></i>Teaching</span>
                 <span class="badge badge-pass">Discrete Mathematics</span>
                 <span class="badge badge-pass">Algorithms</span>
               </div>
@@ -133,17 +177,18 @@
                 <span class="tl-org"><i class="fa-solid fa-building"></i>Ctrl Play Goiânia &nbsp;·&nbsp; Brazil</span>
               </div>
               <h3 class="tl-title">Administration Employee and Teacher</h3>
-              <p class="tl-desc">Worked at a coding school in Goiânia, Brazil, teaching programming to students of varying skill levels while simultaneously handling day-to-day administration — including scheduling, student communication, and preparation of course materials. The role required adapting quickly to different learning styles and operating in a multilingual, international environment.</p>
+              <p class="tl-desc">Worked at a coding school in Goiânia, Brazil, teaching programming to students in the age range 10-15 years old. The role involved preparation of course materials, teaching, and diverse administrative tasks.</p>
               <div class="course-takeaways">
                 <p class="takeaways-label">Key Takeaways</p>
                 <ul class="course-learned">
-                  <li>Developed flexibility in adapting teaching materials and style to suit diverse learning backgrounds</li>
-                  <li>Built practical organisational and communication skills through combined teaching and administrative responsibilities</li>
-                  <li>Gained firsthand experience working in a multilingual, cross-cultural professional setting</li>
+                  <li>Improved my programming and problem-solving skills.</li>
+                  <li>Developed experience teaching and communicating technical concepts in a foreign language.</li>
+                  <li>Learned to structure educational material for larger groups of students.</li>
+                  <li>Improved my confidence and presentation skills when speaking in front of groups.</li>
                 </ul>
               </div>
               <div class="badge-row">
-                <span class="badge badge-type"><i class="fa-solid fa-chalkboard-user"></i> Teaching</span>
+                <span class="badge badge-type"><i class="fa-solid fa-chalkboard-user"></i>Teaching</span>
                 <span class="badge badge-pass">Administration</span>
                 <span class="badge badge-pass">Programming</span>
               </div>
@@ -158,16 +203,17 @@
                 <span class="tl-org"><i class="fa-solid fa-school"></i>Hillerød Handelsgymnasium &nbsp;·&nbsp; Part-time</span>
               </div>
               <h3 class="tl-title">Mentor in Mathematics</h3>
-              <p class="tl-desc">Provided one-on-one and small-group mathematics tutoring to fellow students at Hillerød Handelsgymnasium, covering curriculum topics and supporting exam preparation across a range of ability levels.</p>
+              <p class="tl-desc">Provided one-on-one and small-group mathematics tutoring to first and second year students at Hillerød Handelsgymnasium. I helped with syllabus topics and exam preparation.</p>
               <div class="course-takeaways">
                 <p class="takeaways-label">Key Takeaways</p>
                 <ul class="course-learned">
-                  <li>Developed clear, patient explanations for abstract mathematical concepts tailored to each student's needs</li>
-                  <li>Helped students build confidence and achieve measurable improvement in their results</li>
+                  <li>Improved my ability to communicate mathematical theory.</li>
+                  <li>Got experience in planning and structuring mathematical lessons.</li>
+                  <li>Developed my understanding of fundamental math.</li>
                 </ul>
               </div>
               <div class="badge-row">
-                <span class="badge badge-type"><i class="fa-solid fa-chalkboard-user"></i> Tutoring</span>
+                <span class="badge badge-type"><i class="fa-solid fa-chalkboard-user"></i>Tutoring</span>
                 <span class="badge badge-pass">Mathematics</span>
               </div>
             </div>
@@ -179,8 +225,61 @@
 
     <hr class="divider">
 
+    <section id="projects" class="timeline-section">
+      <div class="container">
+        <p class="timeline-label"><i class="fa-solid fa-code"></i>&nbsp; Projects</p>
+        <div class="timeline">
+
+          <!-- ═══════════════════════════════════════════════════════════
+               1 — VetAlign
+          ════════════════════════════════════════════════════════════ -->
+          <div class="tl-item">
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i>2025 – Present</span>
+              </div>
+              <h3 class="tl-title">VetAlign - Medical Record System for Veterinary Clinics</h3>
+              <p class="tl-desc">
+                A full-stack medical record and management system designed for Danish veterinary clinics. VetAlign streamlines administrative tasks and has has an AI-assistant for increasing consistency and efficiency of clinical documentation. 
+              </p>
+              <ul class="tl-bullets">
+                <li>Designed and implemented SQL database consisting of 15 tables with various relationships inbetween.</li>
+                <li>Designed and implemented backend architecture in C# using Azure Functions.</li>
+                <li>Built a web application using TypeScript (React).</li>
+                <li>Developed role-based access control and audit logging.</li>
+                <li>Conducted user interviews with veterinary professionals to iteratively refine the product.</li>
+              </ul>
+              <div class="badge-row">
+                <span class="badge badge-type"><i class="fa-solid fa-laptop-code"></i> Full-Stack</span>
+                <span class="badge badge-pass">C#</span>
+                <span class="badge badge-pass">TypeScript</span>
+                <span class="badge badge-pass">React</span>
+                <span class="badge badge-pass">SQL</span>
+                <span class="badge badge-pass">CI/CD</span>
+                <span class="badge badge-pass">Cloud</span>
+              </div>
+
+              <!-- Video embed -->
+              <div class="video-wrap" style="margin-top:24px;">
+                <video controls style="width:100%;height:100%;" preload="metadata">
+                  <!-- Use URL-encoded filename to avoid issues with spaces, and provide fallback link -->
+                  <source src="assets/videos/Vetalign%20demo.mp4" type="video/mp4">
+                  <!-- If browser doesn't support MP4, allow user to download or open directly -->
+                  Your browser does not support the video tag. You can
+                  <a href="assets/videos/Vetalign%20demo.mp4" download>download the video</a>
+                  or <a href="assets/videos/Vetalign%20demo.mp4" target="_blank" rel="noopener">open it in a new tab</a>.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div><!-- /timeline -->
+      </div><!-- /container -->
+    </section>
+
+    <hr class="divider">
+
     <!-- ── Professional development ─────────────────────────────────── -->
-    <section class="timeline-section">
+    <section id="professional-development" class="timeline-section">
       <div class="container">
         <p class="timeline-label"><i class="fa-solid fa-certificate"></i>&nbsp; Professional Development</p>
         <div class="timeline">
@@ -193,7 +292,7 @@
                 <span class="tl-org"><i class="fa-solid fa-building"></i>Netcompany</span>
               </div>
               <h3 class="tl-title">Client Engagement Seminar</h3>
-              <p class="tl-desc">An intensive one-week internal course covering stakeholder management, requirements gathering, and effective client communication within large software delivery projects.</p>
+              <p class="tl-desc">A one-week course covering stakeholder management, requirements gathering, and client communication within software consultation projects.</p>
             </div>
           </div>
 
@@ -205,7 +304,7 @@
                 <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen</span>
               </div>
               <h3 class="tl-title">Teaching Assistant Training Course</h3>
-              <p class="tl-desc">A three-day course on pedagogical methods, inclusive teaching practices, and assessment design for university-level teaching assistants.</p>
+              <p class="tl-desc">A three-day course on pedagogical methods for university teaching assistants.</p>
             </div>
           </div>
 
@@ -217,7 +316,7 @@
                 <span class="tl-org"><i class="fa-solid fa-school"></i>Hillerød Handelsgymnasium</span>
               </div>
               <h3 class="tl-title">Masterclass</h3>
-              <p class="tl-desc">A selective academic enrichment programme designed for high-achieving students, covering advanced topics across mathematics and business disciplines.</p>
+              <p class="tl-desc">A programme for students interested in business and innovation. Consisted of company visits and case-based projects in collaboration with various organisations.</p>
             </div>
           </div>
 

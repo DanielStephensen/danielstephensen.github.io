@@ -362,6 +362,7 @@ p { color: var(--text); }
 }
 
 .badge-pass     { background: var(--gray-badge);  color: var(--gray-text); }
+.badge-grade    { background: var(--green-light);  color: var(--green); }
 .badge-ects     { background: var(--gray-badge);  color: var(--gray-text); }
 .badge-type     { background: var(--blue-light);  color: var(--blue); }
 

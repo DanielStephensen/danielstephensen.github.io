@@ -24,8 +24,6 @@
         <a href="/">About</a>
         <a href="/experience">Experience</a>
         <a href="/education" class="active">Education</a>
-        <a href="/publications">Publications</a>
-        <a href="/projects">Projects</a>
         <a href="https://www.linkedin.com/in/danielstephensen" target="_blank" rel="noopener" class="nav-linkedin" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin"></i>
         </a>
@@ -37,10 +35,68 @@
   <main class="page">
     <header class="section-header">
       <h1>Education</h1>
-      <p>Degrees and courses from the University of Copenhagen — with descriptions, keywords, and key takeaways.</p>
+      <p>Degrees, theses, and a selection of courses from University of Copenhagen — with descriptions, keywords, and key takeaways.</p>
     </header>
 
-    <section class="timeline-section">
+    <!-- ── Timeline ──────────────────────────────────────────────────── -->
+    <section id="theses" class="timeline-section">
+      <div class="container">
+        <p class="timeline-label"><i class="fa-solid fa-book-open"></i>&nbsp; Theses</p>
+        <div class="timeline">
+
+          <!-- Bachelor Thesis -->
+          <div class="tl-item">
+            <div class="tl-card">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jul 2022</span>
+                <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen &nbsp;·&nbsp; Dept. of Computer Science</span>
+              </div>
+              <h3 class="tl-title">Planar Convex Hulls</h3>
+              <p class="tl-desc">
+                Bachelor project in Computer Science investigating algorithms for computing planar convex hulls. The thesis provides a detailed analysis of algorithmic approaches to the convex hull problem, including correctness proofs and both upper and lower asymptotic complexity bounds.
+              </p>
+              <ul class="tl-bullets">
+                <li>Investigated the landscape of planar convex hull algorithms, from the classical gift-wrapping method to optimal output-sensitive algorithms.</li>
+                <li>Proved correctness and analysed the time complexity of each algorithm discussed.</li>
+                <li>Proved the lower bound time complexity for the planar convex hull problem of Ω(n log n).</li>
+                <li>Proved that there exist a randomized algorithm with an expected time complexity of O(n) for a large range of inputs.</li>
+                <li>Implemented selected algorithms and verified their performance on a range of input distributions.</li>
+              </ul>
+              <div class="badge-row">
+                <span class="badge badge-type"><i class="fa-solid fa-graduation-cap"></i> Bachelor Thesis</span>
+                <span class="badge badge-pass">Computational Geometry</span>
+                <span class="badge badge-pass">Algorithms</span>
+              </div>
+              <div class="btn-row">
+                <!-- Replace # with the path to your thesis PDF, e.g. assets/files/bsc-thesis-planar-convex-hulls.pdf -->
+                <a href="/Bachelor_Projekt.pdf" class="btn-download" download>
+                  <i class="fa-solid fa-file-pdf"></i>Download PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- MSc Thesis placeholder -->
+          <div class="tl-item">
+            <div class="tl-card" style="border-style: dashed; background: var(--bg-alt);">
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Expected 2026</span>
+                <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen &nbsp;·&nbsp; Dept. of Computer Science</span>
+              </div>
+              <h3 class="tl-title" style="color: var(--text-muted);">Master's Thesis <span style="font-weight:400; font-size:.9rem;">(in progress)</span></h3>
+              <p class="tl-desc">MSc thesis topic to be announced. This entry will be updated when the thesis is completed.</p>
+              <div class="badge-row">
+                <span class="badge badge-type"><i class="fa-solid fa-graduation-cap"></i> MSc Thesis</span>
+                <span class="badge badge-pass">In Progress</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /timeline theses -->
+      </div><!-- /container -->
+    </section>
+
+    <section id="degrees" class="timeline-section">
       <div class="container">
         <p class="timeline-label"><i class="fa-solid fa-graduation-cap"></i>&nbsp; Degrees</p>
         <div class="timeline">
@@ -48,14 +104,19 @@
           <!-- ══════════════════════════════════════════════════════════
                MSc Computer Science
           ══════════════════════════════════════════════════════════════ -->
-          <div class="tl-item">
+          <div id="msc" class="tl-item">
             <div class="tl-card">
-              <div class="tl-meta">
-                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Feb 2024 – Present</span>
-                <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen</span>
+              <div class="tl-meta course-title-row">
+                <div class="course-title-block">
+                  <span class="tl-date"><i class="fa-regular fa-calendar"></i>Feb 2024 – Present</span>
+                  <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen</span>
+                </div>
+                <div class="course-meta">
+                  <span class="badge badge-grade ">Average Grade: 10.82</span>
+                </div>
               </div>
               <h3 class="tl-title">Master of Science (MSc) in Computer Science</h3>
-              <p class="tl-desc">Specialised in algorithms and machine learning. Graduating June 2026.</p>
+              <p class="tl-desc">Specialised in algorithms and machine learning. Graduating June 2026. The following is a selection of courses, not the full course list.</p>
 
               <div class="course-list">
 
@@ -74,20 +135,18 @@
                       </a>
                     </div>
                   </div>
-                  <p class="course-desc">A study of algorithms for geometric problems, including convex hulls, triangulation, Voronoi diagrams, and spatial data structures.</p>
+                  <p class="course-desc">A study of algorithms for geometric problems, including convex hulls, triangulation, Voronoi diagrams, and robot motion and visibility problems.</p>
                   <div class="course-takeaways">
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
-                      <li>Designed and analysed algorithms for fundamental geometric problems.</li>
-                      <li>Studied optimal and output-sensitive algorithms for convex hulls and triangulation.</li>
-                      <li>Applied spatial data structures to efficient geometric query processing.</li>
+                      <li>Got an understanding of computational geometry and its applications.</li>
+                      <li>Understood the relationship between delauney triangulations and voronoi diagrams.</li>
+                      <li>Learned how robots navigate their environment efficiently using geometric algorithms.</li>
                     </ul>
                   </div>
                   <div class="badge-row">
                     <span class="badge badge-pass">Computational Geometry</span>
-                    <span class="badge badge-pass">Convex Hulls</span>
-                    <span class="badge badge-pass">Voronoi Diagrams</span>
-                    <span class="badge badge-pass">Geometric Algorithms</span>
+                    <span class="badge badge-pass">Algorithms</span>
                   </div>
                 </div>
 
@@ -111,8 +170,8 @@
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
                       <li>Designed greedy approximation schemes and proved their approximation ratios.</li>
-                      <li>Applied LP relaxation and rounding techniques to combinatorial problems.</li>
-                      <li>Studied hardness results and the limits of approximation via the PCP theorem.</li>
+                      <li>Applied LP relaxation and rounding schemes to NP-hard problems.</li>
+                      <li>Understood the limits of non-approximative algorithms for NP-hard problems and how to overcome them.</li>
                     </ul>
                   </div>
                   <div class="badge-row">
@@ -120,70 +179,6 @@
                     <span class="badge badge-pass">NP-Hard Problems</span>
                     <span class="badge badge-pass">LP Relaxation</span>
                     <span class="badge badge-pass">Combinatorial Optimisation</span>
-                  </div>
-                </div>
-
-                <!-- Probability Theory and Statistics 2 -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Apr 2025</span>
-                      <span class="course-name">Probability Theory and Statistics 2 (SS2)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Elective</span>
-                      <a href="https://kurser.ku.dk/course/NMAB10004U" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">An advanced course in probability and statistics, covering stochastic processes, Bayesian inference, and information theory.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Studied martingales, convergence theorems, and stochastic processes.</li>
-                      <li>Applied Bayesian inference with prior-posterior updates and credible intervals.</li>
-                      <li>Used information-theoretic tools including entropy, mutual information, and KL divergence.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Probability</span>
-                    <span class="badge badge-pass">Stochastic Processes</span>
-                    <span class="badge badge-pass">Bayesian Statistics</span>
-                    <span class="badge badge-pass">Information Theory</span>
-                  </div>
-                </div>
-
-                <!-- Advanced Computer Systems -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jan 2025</span>
-                      <span class="course-name">Advanced Computer Systems (ACS)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Mandatory</span>
-                      <a href="https://kurser.ku.dk/course/ndak15006u" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">An in-depth look at modern computer systems, covering distributed systems, concurrency, and low-level performance optimisation.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Studied concurrency models, synchronisation primitives, and race condition analysis.</li>
-                      <li>Explored distributed system design patterns and fault-tolerance mechanisms.</li>
-                      <li>Analysed hardware-level performance including memory hierarchies and I/O bottlenecks.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Distributed Systems</span>
-                    <span class="badge badge-pass">Concurrency</span>
-                    <span class="badge badge-pass">Systems Programming</span>
-                    <span class="badge badge-pass">Performance</span>
                   </div>
                 </div>
 
@@ -202,20 +197,18 @@
                       </a>
                     </div>
                   </div>
-                  <p class="course-desc">A rigorous treatment of advanced algorithmic techniques and data structures, with a focus on complexity analysis and cache-efficient computation.</p>
+                  <p class="course-desc">A wide range of advanced algorithmic techniques and data structures, with focus on analysis of complexity and correctness.</p>
                   <div class="course-takeaways">
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
-                      <li>Analysed amortized complexity and cache-oblivious algorithms in depth.</li>
-                      <li>Studied advanced graph algorithms, persistent data structures, and lower bound techniques.</li>
-                      <li>Proved correctness and complexity bounds for sophisticated algorithmic constructions.</li>
+                      <li>Learned how to reduce various NP-complete problems to each other.</li>
+                      <li>Proved correctness and complexity for a wide span of algorithms.</li>
                     </ul>
                   </div>
                   <div class="badge-row">
                     <span class="badge badge-pass">Algorithms</span>
                     <span class="badge badge-pass">Data Structures</span>
-                    <span class="badge badge-pass">Complexity Analysis</span>
-                    <span class="badge badge-pass">Cache-Oblivious</span>
+                    <span class="badge badge-pass">Complexity Theory</span>
                   </div>
                 </div>
 
@@ -234,13 +227,13 @@
                       </a>
                     </div>
                   </div>
-                  <p class="course-desc">A modern course on NLP covering transformer architectures, pre-trained language models, and their application to a variety of text processing tasks.</p>
+                  <p class="course-desc">Covering LSTM and transformer architectures, finetuning of language models, and their application in various language processing tasks.</p>
                   <div class="course-takeaways">
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
-                      <li>Explored transformer architectures and the attention mechanism in depth.</li>
-                      <li>Fine-tuned pre-trained models (BERT, GPT) on domain-specific NLP tasks.</li>
-                      <li>Built end-to-end NLP pipelines for classification, NER, and sequence labelling.</li>
+                      <li>Explored transformer architectures and attention mechanism in depth.</li>
+                      <li>Fine-tuned pre-trained LM's (BERT) on NLP tasks.</li>
+                      <li>Built end-to-end NLP pipelines for classification and sequence labelling (Named Entity Recognition).</li>
                     </ul>
                   </div>
                   <div class="badge-row">
@@ -248,38 +241,7 @@
                     <span class="badge badge-pass">Transformers</span>
                     <span class="badge badge-pass">BERT</span>
                     <span class="badge badge-pass">Language Models</span>
-                  </div>
-                </div>
-
-                <!-- Advanced Programming -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Nov 2024</span>
-                      <span class="course-name">Advanced Programming (AP)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Mandatory</span>
-                      <a href="https://kurser.ku.dk/course/ndaa09013u" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A course in advanced functional programming using F#, covering type systems, language design, and principled software abstraction.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Mastered higher-order functions, monadic composition, and immutable data structures in F#.</li>
-                      <li>Studied type systems and language semantics for reasoning about program correctness.</li>
-                      <li>Designed and implemented a substantial project using advanced functional programming techniques.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Functional Programming</span>
-                    <span class="badge badge-pass">F#</span>
-                    <span class="badge badge-pass">Type Systems</span>
-                    <span class="badge badge-pass">Language Design</span>
+                    <span class="badge badge-pass">NER</span>
                   </div>
                 </div>
 
@@ -298,52 +260,18 @@
                       </a>
                     </div>
                   </div>
-                  <p class="course-desc">A course on numerical methods for simulating physical and stochastic systems, including Monte Carlo techniques and differential equation solvers.</p>
+                  <p class="course-desc">A course on numerical methods for simulating physical systems, including techniques such as finite difference approximations (FDM), finite volume method (FVM), and finite element method (FEM).</p>
                   <div class="course-takeaways">
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
-                      <li>Applied Monte Carlo methods and variance reduction to complex simulation problems.</li>
-                      <li>Solved ODEs and PDEs numerically using finite difference and finite element methods.</li>
-                      <li>Modelled and analysed stochastic systems and their statistical properties.</li>
+                      <li>Solved solutions to differential equations using numerical techniques such as FDM, FVM, and FEM.</li>
+                      <li>Implemented a computer simulator for physical systems based on physical differential equations.</li>
                     </ul>
                   </div>
                   <div class="badge-row">
-                    <span class="badge badge-pass">Monte Carlo</span>
                     <span class="badge badge-pass">Simulation</span>
                     <span class="badge badge-pass">Numerical Methods</span>
-                    <span class="badge badge-pass">Stochastic Systems</span>
-                  </div>
-                </div>
-
-                <!-- Neural Information Retrieval -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jun 2024</span>
-                      <span class="course-name">Neural Information Retrieval (NIR)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Restricted Elective</span>
-                      <a href="https://kurser.ku.dk/course/ndak20002u/2022-2023" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A course on neural approaches to search and information retrieval, from traditional ranking models to dense neural retrievers.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Studied neural ranking models and dense retrieval with bi-encoder architectures.</li>
-                      <li>Explored contrastive learning and learned similarity metrics for document retrieval.</li>
-                      <li>Implemented and evaluated a neural retrieval pipeline on standard IR benchmarks.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Information Retrieval</span>
-                    <span class="badge badge-pass">Neural Ranking</span>
-                    <span class="badge badge-pass">Dense Retrieval</span>
-                    <span class="badge badge-pass">Search</span>
+                    <span class="badge badge-pass">Differential Equations</span>
                   </div>
                 </div>
 
@@ -362,19 +290,18 @@
                       </a>
                     </div>
                   </div>
-                  <p class="course-desc">A theoretical and practical course on continuous optimisation methods, covering both convex and non-convex settings.</p>
+                  <p class="course-desc">A theoretical and experimental course on continuous optimisation methods, covering both convex and non-convex settings.</p>
                   <div class="course-takeaways">
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
-                      <li>Studied gradient descent variants, Newton's method, and quasi-Newton approaches.</li>
-                      <li>Covered convex optimisation theory, KKT conditions, and Lagrange multipliers.</li>
-                      <li>Implemented and analysed the convergence of numerical optimisation algorithms.</li>
+                      <li>Understood the nature of convex and non-convex minimisation problems.</li>
+                      <li>Learned how to apply KKT conditions and Lagrange multipliers.</li>
+                      <li>Implemented, analysed and visualised the convergence of numerical optimisation algorithms.</li>
                     </ul>
                   </div>
                   <div class="badge-row">
                     <span class="badge badge-pass">Optimisation</span>
                     <span class="badge badge-pass">Gradient Descent</span>
-                    <span class="badge badge-pass">Convex Optimisation</span>
                     <span class="badge badge-pass">Numerical Methods</span>
                   </div>
                 </div>
@@ -394,19 +321,19 @@
                       </a>
                     </div>
                   </div>
-                  <p class="course-desc">A mathematical treatment of sequential decision-making under uncertainty, covering online learning theory and reinforcement learning algorithms.</p>
+                  <p class="course-desc">A course on sequential decision-making under uncertainty, covering online learning theory and reinforcement learning algorithms.</p>
                   <div class="course-takeaways">
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
-                      <li>Studied the multi-armed bandit framework, explore-exploit trade-offs, and regret minimisation.</li>
-                      <li>Learned Q-learning, policy gradient methods, and temporal difference algorithms.</li>
-                      <li>Applied RL algorithms to sequential decision-making and control problems.</li>
+                      <li>Studied the multi-armed bandit framework, explore-exploit trade-offs, and regret minimisation (playing against an adversary).</li>
+                      <li>Learned Q-learning, policy iteration, and value iteration.</li>
+                      <li>Applied neural network-based policies together with Q-learning for gaming and robotics applications.</li>
                     </ul>
                   </div>
                   <div class="badge-row">
                     <span class="badge badge-pass">Reinforcement Learning</span>
                     <span class="badge badge-pass">Online Learning</span>
-                    <span class="badge badge-pass">Bandits</span>
+                    <span class="badge badge-pass">Q-learning</span>
                     <span class="badge badge-pass">Decision Making</span>
                   </div>
                 </div>
@@ -418,80 +345,21 @@
           <!-- ══════════════════════════════════════════════════════════
                BSc Computer Science
           ══════════════════════════════════════════════════════════════ -->
-          <div class="tl-item">
+          <div id="bsc" class="tl-item">
             <div class="tl-card">
-              <div class="tl-meta">
-                <span class="tl-date"><i class="fa-regular fa-calendar"></i>Sep 2019 – Jun 2022</span>
-                <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen</span>
+              <div class="tl-meta course-title-row">
+                <div class="course-title-block">
+                  <span class="tl-date"><i class="fa-regular fa-calendar"></i>Sep 2019 – Jun 2022</span>
+                  <span class="tl-org"><i class="fa-solid fa-building-columns"></i>University of Copenhagen</span>
+                </div>
+                <div class="course-meta">
+                  <span class="badge badge-grade ">Average Grade: 9.35</span>
+                </div>
               </div>
               <h3 class="tl-title">Bachelor of Science (BSc) in Computer Science</h3>
-              <p class="tl-desc">Specialised in machine learning.</p>
+              <p class="tl-desc">Specialised in machine learning. The following is a selection of courses, not the full course list.</p>
 
               <div class="course-list">
-
-                <!-- Philosophy of CS -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jun 2022</span>
-                      <span class="course-name">Philosophy of Computer Science (VtDat)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Specialisation</span>
-                      <a href="https://kurser.ku.dk/course/nndb19000u" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">An interdisciplinary course examining the philosophical and ethical foundations of computation and artificial intelligence.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Examined the Church-Turing thesis, computability, and decidability.</li>
-                      <li>Discussed epistemological questions in CS and the nature of algorithmic explanation.</li>
-                      <li>Engaged with ethical dimensions of AI and the societal impact of computing systems.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Philosophy</span>
-                    <span class="badge badge-pass">Computability</span>
-                    <span class="badge badge-pass">Ethics</span>
-                    <span class="badge badge-pass">Epistemology</span>
-                  </div>
-                </div>
-
-                <!-- Elements of Machine Learning -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Apr 2022</span>
-                      <span class="course-name">Elements of Machine Learning (EML)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Specialisation</span>
-                      <a href="https://kurser.ku.dk/course/ndab18003u/2021-2022" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">An introduction to the core concepts and methods of machine learning, covering both supervised and unsupervised approaches.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Introduced supervised learning including regression, SVMs, and decision trees.</li>
-                      <li>Studied unsupervised methods: k-means clustering and PCA.</li>
-                      <li>Applied the bias-variance trade-off and cross-validation for model selection.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Machine Learning</span>
-                    <span class="badge badge-pass">Supervised Learning</span>
-                    <span class="badge badge-pass">Clustering</span>
-                    <span class="badge badge-pass">Model Evaluation</span>
-                  </div>
-                </div>
 
                 <!-- Machine Learning B -->
                 <div class="course-item">
@@ -508,120 +376,23 @@
                       </a>
                     </div>
                   </div>
-                  <p class="course-desc">An advanced machine learning course focusing on probabilistic models, generative approaches, and Bayesian methods.</p>
+                  <p class="course-desc">A course on the foundations of machine learning, introducing the concept of generalisation, and a variety of basic machine learning techniques, including kernel methods and Bayesian methods.</p>
                   <div class="course-takeaways">
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
-                      <li>Studied probabilistic graphical models, variational inference, and the EM algorithm.</li>
-                      <li>Covered Gaussian processes, Bayesian optimisation, and deep generative models (VAEs, GANs).</li>
-                      <li>Applied advanced ML methods to structured prediction and uncertainty quantification.</li>
+                      <li>Using generalisation bounds on SVMs to bound how likely it is that empirical performance differs from true performance.</li>
+                      <li>Implemented and analysed boosting techniques such as AdaBoost.</li>
+                      <li>Understood the philosophical differences between Bayesian and frequentist approaches.</li>
                     </ul>
                   </div>
                   <div class="badge-row">
                     <span class="badge badge-pass">Probabilistic Models</span>
                     <span class="badge badge-pass">Bayesian ML</span>
-                    <span class="badge badge-pass">Generative Models</span>
-                    <span class="badge badge-pass">Variational Inference</span>
+                    <span class="badge badge-pass">Frequentist ML</span>
+                    <span class="badge badge-pass">Generalisation Bounds</span>
                   </div>
                 </div>
 
-                <!-- Logic in CS -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jan 2022</span>
-                      <span class="course-name">Logic in Computer Science (LICS)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Elective</span>
-                      <a href="https://kurser.ku.dk/course/NDAB16011U" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A formal treatment of logic as a tool for reasoning about programs, covering propositional and predicate logic through to model theory.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Studied propositional and first-order predicate logic: syntax, semantics, and proof systems.</li>
-                      <li>Applied formal logic to program verification and automated reasoning.</li>
-                      <li>Explored the correspondence between logic and computation.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Logic</span>
-                    <span class="badge badge-pass">Formal Verification</span>
-                    <span class="badge badge-pass">Proof Theory</span>
-                    <span class="badge badge-pass">Model Theory</span>
-                  </div>
-                </div>
-
-                <!-- Machine Learning A -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Nov 2021</span>
-                      <span class="course-name">Machine Learning A (MLA)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Elective</span>
-                      <a href="https://kurser.ku.dk/course/ndak22000u" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A practical and theoretical course on deep learning, covering neural network architectures and modern training techniques.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Studied feedforward networks, CNNs, and recurrent models in depth.</li>
-                      <li>Implemented and trained deep learning models using PyTorch on real datasets.</li>
-                      <li>Explored regularisation, batch normalisation, and transfer learning techniques.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Deep Learning</span>
-                    <span class="badge badge-pass">CNNs</span>
-                    <span class="badge badge-pass">PyTorch</span>
-                    <span class="badge badge-pass">Backpropagation</span>
-                  </div>
-                </div>
-
-                <!-- Mathematical Analysis -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Nov 2021</span>
-                      <span class="course-name">Mathematical Analysis (MatAn)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Elective</span>
-                      <a href="https://kurser.ku.dk/course/nmab20001u" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A rigorous course in real analysis, providing the mathematical foundations for advanced study in algorithms and machine learning.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Covered sequences, series, limits, continuity, and differentiability rigorously.</li>
-                      <li>Studied the Riemann integral and the fundamental theorem of calculus.</li>
-                      <li>Proved core theorems and applied them to optimisation and computing.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Real Analysis</span>
-                    <span class="badge badge-pass">Sequences &amp; Series</span>
-                    <span class="badge badge-pass">Continuity</span>
-                    <span class="badge badge-pass">Integration</span>
-                  </div>
-                </div>
-
-                <!-- RAD — TA -->
                 <div class="course-item">
                   <div class="course-title-row">
                     <div class="course-title-block">
@@ -629,7 +400,6 @@
                       <span class="course-name">Randomized Algorithms for Data Analysis (RAD)</span>
                     </div>
                     <div class="course-meta">
-                      <span class="badge badge-ta"><i class="fa-solid fa-chalkboard-user"></i> TA</span>
                       <span class="badge badge-ects">7.5 ECTS</span>
                       <span class="badge badge-course-type">Specialisation</span>
                       <a href="https://kurser.ku.dk/course/ndab18001u" target="_blank" rel="noopener" class="course-link">
@@ -637,20 +407,19 @@
                       </a>
                     </div>
                   </div>
-                  <p class="course-desc">A course on probabilistic algorithm design for large-scale data analysis, covering randomisation as a tool for efficiency and approximation.</p>
+                  <p class="course-desc">A course on probabilistic algorithm design, investigating randomisation as both a tool for efficiency and approximation.</p>
                   <div class="course-takeaways">
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
-                      <li>Studied random sampling, hashing, and Markov chain Monte Carlo methods.</li>
-                      <li>Learned sketching and streaming algorithms for memory-constrained large-scale data.</li>
-                      <li>Analysed algorithms using Chernoff bounds and concentration inequalities.</li>
+                      <li>Understood the principles of randomized algorithms and their applications.</li>
+                      <li>Learned how hashing can be used for efficient sampling for many applications where full independence is not required.</li>
+                      <li>Analysed algorithms using Chernoff bounds and other generalisation bounds.</li>
                     </ul>
                   </div>
                   <div class="badge-row">
                     <span class="badge badge-pass">Randomized Algorithms</span>
                     <span class="badge badge-pass">Hashing</span>
-                    <span class="badge badge-pass">Sketching</span>
-                    <span class="badge badge-pass">Streaming</span>
+                    <span class="badge badge-pass">Generalisation Bounds</span>
                   </div>
                 </div>
 
@@ -669,312 +438,22 @@
                       </a>
                     </div>
                   </div>
-                  <p class="course-desc">An end-to-end course in data science, from raw data ingestion to predictive modelling and result communication.</p>
+                  <p class="course-desc">An end-to-end course in data science, from raw data handling to predictive modelling and result communication.</p>
                   <div class="course-takeaways">
                     <p class="takeaways-label">Key Takeaways</p>
                     <ul class="course-learned">
-                      <li>Built complete data pipelines covering cleaning, feature engineering, and model evaluation.</li>
-                      <li>Applied classification, clustering, and dimensionality reduction to real datasets.</li>
-                      <li>Created effective visualisations and communicated analytical insights clearly.</li>
+                      <li>Built complete data pipelines covering cleaning, model implementation, and model evaluation.</li>
+                      <li>Applied classification, clustering, and dimensionality reduction to large datasets.</li>
+                      <li>Created visualisations and communicated findings.</li>
                     </ul>
                   </div>
                   <div class="badge-row">
                     <span class="badge badge-pass">Data Science</span>
-                    <span class="badge badge-pass">Feature Engineering</span>
                     <span class="badge badge-pass">Machine Learning</span>
+                    <span class="badge badge-pass">Data Cleaning</span>
                     <span class="badge badge-pass">Visualisation</span>
                   </div>
                 </div>
-
-                <!-- Algorithms and Data Structures -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Apr 2021</span>
-                      <span class="course-name">Algorithms and Data Structures (AD)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Specialisation</span>
-                      <a href="https://kurser.ku.dk/course/ndaa04010u" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A deep dive into fundamental algorithms and data structures, with rigorous complexity analysis and practical implementation.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Studied advanced sorting, balanced trees, heaps, and hash tables in depth.</li>
-                      <li>Analysed time and space complexity rigorously for a range of graph problems.</li>
-                      <li>Implemented and benchmarked data structures in a practical programming component.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Algorithms</span>
-                    <span class="badge badge-pass">Data Structures</span>
-                    <span class="badge badge-pass">Complexity</span>
-                    <span class="badge badge-pass">Graph Algorithms</span>
-                  </div>
-                </div>
-
-                <!-- Modelling and Analysis of Data -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jan 2021</span>
-                      <span class="course-name">Modelling and Analysis of Data (MAD)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Specialisation</span>
-                      <a href="https://kurser.ku.dk/course/ndab16005u" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">An applied statistics course covering the construction, fitting, and evaluation of statistical models for real-world data.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Built and evaluated linear and logistic regression models on real datasets.</li>
-                      <li>Applied hypothesis testing, confidence intervals, and model selection criteria.</li>
-                      <li>Analysed data using Python with NumPy, Pandas, and Matplotlib.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Statistics</span>
-                    <span class="badge badge-pass">Regression</span>
-                    <span class="badge badge-pass">Hypothesis Testing</span>
-                    <span class="badge badge-pass">Data Analysis</span>
-                  </div>
-                </div>
-
-                <!-- Computer Systems -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jan 2021</span>
-                      <span class="course-name">Computer Systems (CompSys)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">15 ECTS</span>
-                      <span class="badge badge-course-type">Specialisation</span>
-                      <a href="https://kurser.ku.dk/?q=Computer+Systems" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A comprehensive look at how computers work at the hardware and system software level, from processor pipelines to operating systems.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Explored the CPU pipeline, memory hierarchy, and caching mechanisms in detail.</li>
-                      <li>Learned assembly language programming and system call interfaces.</li>
-                      <li>Studied OS concepts including process management and virtual memory.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Computer Architecture</span>
-                    <span class="badge badge-pass">Assembly</span>
-                    <span class="badge badge-pass">Operating Systems</span>
-                    <span class="badge badge-pass">Memory Management</span>
-                  </div>
-                </div>
-
-                <!-- MASD -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Nov 2020</span>
-                      <span class="course-name">Mathematical Analysis and Probability Theory for Computer Scientists (MASD)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Specialisation</span>
-                      <a href="https://kurser.ku.dk/course/ndab18002u" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A mathematically rigorous introduction to calculus and probability theory, oriented towards computer science applications.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Studied limits, differentiation, and integration in a CS-oriented mathematical framework.</li>
-                      <li>Covered probability theory: random variables, distributions, and expectation.</li>
-                      <li>Applied analytical techniques to algorithm analysis and probabilistic reasoning.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Calculus</span>
-                    <span class="badge badge-pass">Probability</span>
-                    <span class="badge badge-pass">Mathematical Analysis</span>
-                  </div>
-                </div>
-
-                <!-- Software Development -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jun 2020</span>
-                      <span class="course-name">Software Development (SU)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">15 ECTS</span>
-                      <span class="badge badge-course-type">Mandatory</span>
-                      <a href="https://kurser.ku.dk/course/ndab15011u/" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A team-based course in modern software engineering, covering the full development lifecycle from requirements to deployment.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Practised agile development with version control, code review, and continuous integration.</li>
-                      <li>Applied software engineering principles including testing, design patterns, and modular architecture.</li>
-                      <li>Delivered a substantial team project from requirements through to deployment.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Software Development</span>
-                    <span class="badge badge-pass">Git</span>
-                    <span class="badge badge-pass">Testing</span>
-                    <span class="badge badge-pass">Agile</span>
-                    <span class="badge badge-pass">Design Patterns</span>
-                  </div>
-                </div>
-
-                <!-- Linear Algebra -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jun 2020</span>
-                      <span class="course-name">Linear Algebra in Computer Science (LinAlgDat)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Mandatory</span>
-                      <a href="https://kurser.ku.dk/course/nmab15002u/" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A course in linear algebra tailored to computer science, with applications in graphics, machine learning, and data analysis.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Covered vectors, matrices, linear transformations, and singular value decomposition.</li>
-                      <li>Explored applications in computer graphics, dimensionality reduction, and ML.</li>
-                      <li>Built geometric intuition for linear algebraic operations in high-dimensional spaces.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Linear Algebra</span>
-                    <span class="badge badge-pass">Matrices</span>
-                    <span class="badge badge-pass">Eigenvalues</span>
-                    <span class="badge badge-pass">Dimensionality Reduction</span>
-                  </div>
-                </div>
-
-                <!-- Interaction Design -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Apr 2020</span>
-                      <span class="course-name">Interaction Design (Inter)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">7.5 ECTS</span>
-                      <span class="badge badge-course-type">Mandatory</span>
-                      <a href="https://kurser.ku.dk/course/ndab15003u/" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A hands-on course in user-centred design, covering the full cycle from requirements gathering to usability evaluation.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Applied user-centred design principles and iterative prototyping to real design problems.</li>
-                      <li>Conducted usability evaluations including heuristic analysis and user testing sessions.</li>
-                      <li>Developed wireframes and interactive prototypes with documented design rationale.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">UX</span>
-                    <span class="badge badge-pass">Usability</span>
-                    <span class="badge badge-pass">Prototyping</span>
-                    <span class="badge badge-pass">HCI</span>
-                  </div>
-                </div>
-
-                <!-- Discrete Mathematics and Algorithms — TA -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jan 2020</span>
-                      <span class="course-name">Discrete Mathematics and Algorithms (DMA)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ta"><i class="fa-solid fa-chalkboard-user"></i> TA</span>
-                      <span class="badge badge-ects">15 ECTS</span>
-                      <span class="badge badge-course-type">Mandatory</span>
-                      <a href="https://kurser.ku.dk/course/ndab15008u/" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">A rigorous introduction to discrete mathematics and algorithmic thinking, covering the mathematical tools central to computer science.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Studied graph theory, combinatorics, and formal proof techniques including induction and contradiction.</li>
-                      <li>Learned algorithm design strategies: divide-and-conquer, greedy methods, and dynamic programming.</li>
-                      <li>Analysed algorithm complexity using Big-O notation and recurrence relations.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Graph Theory</span>
-                    <span class="badge badge-pass">Combinatorics</span>
-                    <span class="badge badge-pass">Proofs</span>
-                    <span class="badge badge-pass">Algorithm Design</span>
-                  </div>
-                </div>
-
-                <!-- Programming and Problem Solving -->
-                <div class="course-item">
-                  <div class="course-title-row">
-                    <div class="course-title-block">
-                      <span class="tl-date"><i class="fa-regular fa-calendar"></i>Jan 2020</span>
-                      <span class="course-name">Programming and Problem Solving (PoP)</span>
-                    </div>
-                    <div class="course-meta">
-                      <span class="badge badge-ects">15 ECTS</span>
-                      <span class="badge badge-course-type">Mandatory</span>
-                      <a href="https://kurser.ku.dk/course/ndab15009u/" target="_blank" rel="noopener" class="course-link">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>Course page
-                      </a>
-                    </div>
-                  </div>
-                  <p class="course-desc">An introduction to programming and computational problem-solving, forming the foundation for the computer science programme.</p>
-                  <div class="course-takeaways">
-                    <p class="takeaways-label">Key Takeaways</p>
-                    <ul class="course-learned">
-                      <li>Built a solid foundation in Python including control flow, functions, and recursion.</li>
-                      <li>Developed systematic problem-solving skills through structured algorithm design.</li>
-                      <li>Implemented and tested solutions to a wide range of computational problems.</li>
-                    </ul>
-                  </div>
-                  <div class="badge-row">
-                    <span class="badge badge-pass">Python</span>
-                    <span class="badge badge-pass">Programming</span>
-                    <span class="badge badge-pass">Algorithms</span>
-                    <span class="badge badge-pass">Problem Solving</span>
-                  </div>
-                </div>
-
               </div><!-- /course-list BSc -->
             </div>
           </div>
@@ -990,9 +469,8 @@
               </div>
               <h3 class="tl-title">Højere Handelseksamen (HHX)</h3>
               <ul class="tl-bullets">
-                <li>Completed the Danish Higher Commercial Examination (HHX), a three-year upper secondary programme with a business and economics profile.</li>
-                <li>Developed a strong foundation in mathematics, economics, and business communication.</li>
-                <li>Participated in the school's Masterclass enrichment programme and served as a mathematics mentor for fellow students.</li>
+                <li>Completed the Danish Higher Commercial Examination (HHX), a three-year upper secondary programme with a specialisation in economics and mathematics.</li>
+                <li>Developed a foundation in business.</li>
               </ul>
             </div>
           </div>
