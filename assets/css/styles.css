@@ -735,6 +735,20 @@ p { color: var(--text); }
 .lang-item i { color: var(--blue); font-size: 1rem; }
 .lang-item span { font-size: .9rem; font-weight: 600; color: var(--navy); }
 
+@font-face {
+  font-family: 'Now';
+  src: url('../fonts/Now-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Now';
+  src: url('../fonts/Now-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* =====================================================================
    Divider
    ===================================================================== */

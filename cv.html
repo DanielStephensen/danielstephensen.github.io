@@ -74,6 +74,7 @@
       flex-direction: column;
       justify-content: center;
       margin: 40px 16px 10px 54px;
+      font-family: 'Now', sans-serif;
     }
 
     /* Photo centred on the header/body boundary line */
@@ -93,20 +94,32 @@
 
     .cv-header-name {
       font-size: 27px;
-      font-weight: 800;
+      font-weight: 700;
       color: #fff;
       text-transform: uppercase;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.04em;
       line-height: 1.1;
       margin-bottom: 6px;
     }
 
     .cv-header-title {
-      font-size: 14.4px;
+      font-size: 14px;
       font-weight: 500;
-      color: rgba(255,255,255,0.82);
+      color: rgba(255,255,255);
       text-transform: uppercase;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.1em;
+    }
+
+    #cv-title {
+      font-family: 'Now', 'Inter', sans-serif !important;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    #cv-subtitle {
+      font-family: 'Now', 'Inter', sans-serif !important;
+      font-weight: 500;
+      letter-spacing: 0.1em;
     }
 
     /* ══════════════════════════════════════════════════════════
@@ -129,9 +142,9 @@
 
     .cv-sb-heading {
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.0em;
       color: #1e293b;
       padding-bottom: 5px;
       margin-bottom: 10px;
@@ -558,8 +571,8 @@
         <div class="cv-header-spacer"></div>
 
         <div class="cv-header-text-side">
-          <div class="cv-header-name">Daniel de Oliveira<br>Stephensen</div>
-          <div class="cv-header-title">Computer Scientist</div>
+          <div id="cv-title" class="cv-header-name">Daniel de Oliveira<br>Stephensen</div>
+          <div id="cv-subtitle" class="cv-header-title">Computer Scientist</div>
         </div>
 
         <img src="assets/images/CV-portrait.png" alt="Daniel de Oliveira Stephensen" class="cv-header-photo-img">
